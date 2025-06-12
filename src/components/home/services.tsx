@@ -17,7 +17,7 @@ function ServicesList() {
     }
   };
 
-  const handleIconClick = (index) => {
+  const handleIconClick = (index: number): void => {
     setActiveIndex(index);
     window.scrollTo({
       top: index * window.innerHeight,
@@ -54,7 +54,7 @@ function ServicesList() {
             <div className="text-primary">{services[activeIndex].small_description}</div>
             <div className="text-sm">{services[activeIndex].description}</div>
             <Button variant={'link'}>
-              <Link href={services[activeIndex].button}>Book Us Now</Link>
+              <Link href={services[activeIndex].button1}>Book Us Now</Link>
             </Button>
           </div>
         </div>

@@ -10,6 +10,7 @@ export interface NavItem {
 export interface PartnerItem {
   path: any;
   alt: string;
+  link?: string;
 }
 
 export interface NavItemWithChildren extends NavItem {
@@ -32,10 +33,15 @@ export interface FooterItem {
 export interface Services {
   icon: any;
   headline: string;
+  slug: string;
   small_description: string;
   description: string;
-  button: string;
+  button1: string;
+  button2?: string;
+  partners?: PartnerItem[];
   image: any;
+  second_headline: string;
+  second_description: string;
 }
 export interface Stats {
   icon: any;
@@ -48,6 +54,11 @@ export interface Testmonial{
   name: string;
   icon: any;
 }
+
+export interface ServiceProps {
+  params: { slug: string };
+};
+
 export type MainNavItem = NavItemWithOptionalChildren;
 
 export type SidebarNavItem = NavItemWithChildren;

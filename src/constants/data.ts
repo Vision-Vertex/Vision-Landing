@@ -8,6 +8,7 @@ import Icon5 from '../../public/icons/image 5.png';
 import Picture1 from '../../public/images/Rectangle 34 (1).png';
 import Picture2 from '../../public/images/Rectangle 34.png';
 import { UserRound } from 'lucide-react';
+import { slugify } from '@/lib/slugify';
 
 export const navItems: NavItem[] = [
   {
@@ -78,52 +79,73 @@ export const services: Services[] = [
   {
     icon: Icon1,
     headline: 'Offshore Development Teams',
+    slug:slugify('Offshore Development Teams'),
     small_description:
       'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
     description:
       'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. ',
-    button: '/',
-    image: Picture2,
+    button1: '/',
+    button2: '/',
+    partners:[{path:"https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", alt:"Google Logo", link:"https://google.com"},{path:"https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", alt:"Google Logo", link:"https://google.com"},{path:"https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", alt:"Google Logo", link:"https://google.com"},{path:"https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", alt:"Google Logo", link:"https://google.com"},{path:"https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", alt:"Google Logo", link:"https://google.com"},{path:"https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", alt:"Google Logo", link:"https://google.com"},{path:"https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", alt:"Google Logo", link:"https://google.com"}],
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+    second_headline:"Why Choose Our Offshore Teams?",
+    second_description:"At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.",
   },
   {
     icon: Icon2,
     headline: 'Offshore Development Teams 1',
+    slug:slugify('Offshore Development Teams 1'),
     small_description:
       'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
     description:
       'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. ',
-    button: '/',
+    button1: '/',
+    button2: '/',
     image: Picture1,
+    second_headline:"Why Choose Our Offshore Teams?",
+    second_description:"At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.",
   },
   {
     icon: Icon3,
     headline: 'Offshore Development Teams 2',
+    slug:slugify('Offshore Development Teams 2'),
     small_description:
       'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
     description:
       'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. ',
-    button: '/',
+    button1: '/',
+    button2: '/',
     image: Picture2,
+    second_headline:"Why Choose Our Offshore Teams?",
+    second_description:"At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.",
   },
   {
     icon: Icon4,
     headline: 'Offshore Development Teams 3',
+    slug:slugify('Offshore Development Teams 3'),
     small_description:
       'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
     description:
       'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. ',
-    button: '/',
+    button1: '/',
+    button2: '/',
     image: Picture2,
+    second_headline:"Why Choose Our Offshore Teams?",
+    second_description:"At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.",
   },
   {
     icon: Icon5,
     headline: 'Offshore Development Teams 4',
+    slug:slugify('Offshore Development Teams 4'),
     small_description:
       'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
     description:
       'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. ',
-    button: '/',
+    button1: '/',
+    button2: '/',
     image: Picture2,
+    second_headline:"Why Choose Our Offshore Teams?",
+    second_description:"At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.",
   },
 ];
 export const stats: Stats[] = [
