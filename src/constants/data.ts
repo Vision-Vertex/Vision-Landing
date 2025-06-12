@@ -108,7 +108,10 @@ export const services: Services[] = [
     image: Picture1,
     second_headline:"Why Choose Our Offshore Teams?",
     second_description:"At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.",
-    cards: []
+    cards: [{icon:Icon1, title:"24/7 Productivity", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon2, title:"Skilled Talent Pool", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon3, title:"Expertise", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon4, title:"Scalability", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},]
   },
   {
     icon: Icon3,
@@ -123,7 +126,10 @@ export const services: Services[] = [
     image: Picture2,
     second_headline:"Why Choose Our Offshore Teams?",
     second_description:"At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.",
-    cards: []
+    cards: [{icon:Icon1, title:"24/7 Productivity", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon2, title:"Skilled Talent Pool", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon3, title:"Expertise", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon4, title:"Scalability", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},]
   },
   {
     icon: Icon4,
@@ -138,7 +144,10 @@ export const services: Services[] = [
     image: Picture2,
     second_headline:"Why Choose Our Offshore Teams?",
     second_description:"At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.",
-    cards: []
+    cards: [{icon:Icon1, title:"24/7 Productivity", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon2, title:"Skilled Talent Pool", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon3, title:"Expertise", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon4, title:"Scalability", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},]
   },
   {
     icon: Icon5,
@@ -153,7 +162,10 @@ export const services: Services[] = [
     image: Picture2,
     second_headline:"Why Choose Our Offshore Teams?",
     second_description:"At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.",
-    cards: []
+    cards: [{icon:Icon1, title:"24/7 Productivity", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon2, title:"Skilled Talent Pool", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon3, title:"Expertise", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},
+      {icon:Icon4, title:"Scalability", description:"Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings."},]
   },
 ];
 export const stats: Stats[] = [

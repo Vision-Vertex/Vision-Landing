@@ -114,11 +114,11 @@ function ServicesPage({ params }: ServiceProps) {
 
       {/* Case Studies Section */}
       <div className="px-6 py-8 bg-white max-w-6xl mx-auto px-4">
-      <h2 className="text-2xl font-semibold text-primary mb-4">Case Studies</h2>
+      <h2 className="text-3xl font-bold text-primary mb-8">Case Studies</h2>
 
-      <div className="bg-primary text-white rounded-2xl px-6 py-8 flex flex-col md:flex-row justify-between gap-6 md:gap-0">
+      <div className="bg-primary text-white rounded-2xl px-6 py-20 flex flex-col md:flex-row justify-between gap-6 md:gap-0">
         
-        <div className="md:w-1/3 text-sm leading-relaxed">
+        <div className="md:w-1/3 text-sm leading-relaxed px-6">
           For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.
         </div>
 
@@ -126,7 +126,7 @@ function ServicesPage({ params }: ServiceProps) {
         <div className="hidden md:block w-px bg-secondary mx-6" />
 
         
-        <div className="md:w-1/3 text-sm leading-relaxed">
+        <div className="md:w-1/3 text-sm leading-relaxed px-6">
           For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.
         </div>
 
@@ -134,7 +134,7 @@ function ServicesPage({ params }: ServiceProps) {
         <div className="hidden md:block w-px bg-secondary mx-6" />
 
         
-        <div className="md:w-1/3 text-sm leading-relaxed">
+        <div className="md:w-1/3 text-sm leading-relaxed px-6">
           For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.
         </div>
       </div>
