@@ -30,6 +30,11 @@ export interface FooterItem {
   }[];
 }
 
+export interface Card {
+  icon: any;
+  title: string;
+  description: string;
+}
 export interface Services {
   icon: any;
   headline: string;
@@ -42,6 +47,7 @@ export interface Services {
   image: any;
   second_headline: string;
   second_description: string;
+  cards: Card[];
 }
 export interface Stats {
   icon: any;
