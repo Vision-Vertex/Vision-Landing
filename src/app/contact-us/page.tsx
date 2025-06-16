@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import {Button} from '@/components/ui/button';
+import Footer from '@/components/layout/footer';
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -21,7 +22,8 @@ const ContactUs = () => {
   };
 
   return (
-<div className="grid grid-cols-2 gap-10 px-40 py-20 h-[456px]">
+    <div className='flex flex-col min-h-screen bg-white gap-14'>
+<div className="grid grid-cols-2 gap-10 px-40 py-20">
   {/* left side - form */}
   <div className="flex flex-col">
     <h1 className="text-3xl font-bold text-primary mb-2">Get In Touch</h1>
@@ -141,7 +143,8 @@ const ContactUs = () => {
     ></iframe>
   </div>
 </div>
-
+<Footer/>
+</div>
   );
 };
 
