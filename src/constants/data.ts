@@ -78,7 +78,7 @@ export const partners: PartnerItem[] = [
 export const services: Services[] = [
   {
     icon: Icon1,
-    headline: 'Offshore Development Teams',
+    headline: 'Offshore Development',
     slug:slugify('Offshore Development Teams'),
     small_description:
       'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
