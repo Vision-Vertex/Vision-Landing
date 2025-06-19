@@ -143,7 +143,6 @@ const ContactUs = () => {
     ></iframe>
   </div>
 </div>
-<Footer/>
 </div>
   );
 };

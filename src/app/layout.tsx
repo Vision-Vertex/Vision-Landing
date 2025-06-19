@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/components/layout/navbar';
 import PageContainer from '@/components/layout/page-container';
+import Footer from '@/components/layout/footer';
 
 const poppinsRegular = Poppins({
   weight: '500',
@@ -19,7 +20,6 @@ const poppinsExtraBold = Poppins({
   subsets: ['latin', 'latin-ext'],
 });
 
-//TODO:Update Metadata and favicon
 export const metadata: Metadata = {
   title: 'Vison 5',
   description: 'Vision 5 description',
@@ -37,6 +37,7 @@ export default function RootLayout({
           <NavBar />
 
           {children}
+          <Footer />
         {/* </PageContainer> */}
       </body>
     </html>

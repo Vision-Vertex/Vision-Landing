@@ -1,9 +1,34 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
 import { stats } from '@/constants/data';
+import { useCountUp } from '@/hooks/useCountUp';
 
-function stat() {
+function Stat() {
+  const [start, setStart] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let hasAnimated = false;
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setStart(true);
+          hasAnimated = true;
+          observer.disconnect(); // Stop observing after first trigger
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="bg-accent w-screen grid grid-cols-2 px-40 py-20 gap-20 justify-between">
+    <div ref={sectionRef} className="bg-accent w-screen grid grid-cols-2 px-28 py-20 gap-20 justify-between mb-24">
       <div>
         <div className="text-4xl">
           Helping local & international{' '}
@@ -12,18 +37,21 @@ function stat() {
         <div>We reached here with our hard work and dedication</div>
       </div>
       <div className="grid grid-cols-2 gap-2">
-        {stats.map((stat) => (
-          <div className="flex gap-2 items-center">
-            {<stat.icon size={24} />}
-            <div className='text-gray-600'>
-              <div className='text-4xl '>{stat.number.toLocaleString()}</div>
-              <div className='text-sm font-light'>{stat.name}</div>
+        {stats.map((stat, i) => {
+          const count = useCountUp(stat.number, start, 1500);
+          return (
+            <div className="flex gap-2 items-center" key={i}>
+              {<stat.icon size={24} />}
+              <div className='text-gray-600'>
+                <div className='text-4xl '>{count.toLocaleString()}</div>
+                <div className='text-sm font-light'>{stat.name}</div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
 }
 
-export default stat;
+export default Stat;

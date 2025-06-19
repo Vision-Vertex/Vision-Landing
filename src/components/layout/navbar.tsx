@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import Logo from '../../../public/logos/Vision5 Logo_O1.svg';
 
 import { cn } from '@/lib/utils';
@@ -21,9 +22,17 @@ import { navItems } from '@/constants/data';
 import PageContainer from './page-container';
 
 export default function NavigationMenuDemo() {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+  
   return (
-    <div className="flex justify-between items-center w-full bg-accent p-4 md:px-14 md:py-7">
-      <Image src={Logo} width={110} height={110} alt="Logo" />
+    <div className={cn(
+      "flex justify-between items-center w-full p-4 md:px-14 md:py-7",
+      isHomePage ? "bg-accent" : "bg-white"
+    )}>
+      <Link href={'/'}>
+        <Image src={Logo} width={110} height={110} alt="Logo" />
+      </Link>
       <div className="flex gap-10">
         <NavigationMenu>
           <NavigationMenuList>
@@ -63,17 +72,17 @@ export default function NavigationMenuDemo() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem> */}
-            <NavigationMenuItem>
+            <NavigationMenuItem className='flex items-center'>
               {navItems.map((navitem) =>
                 navitem.link ? (
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle() + ' bg-transparent'} key={navitem.title}>
                     <Link href={navitem.href} passHref>
                       {navitem.title}
                     </Link>
                   </NavigationMenuLink>
                 ) : (
-                  <>
-                    <NavigationMenuTrigger>
+                  <div key={navitem.title}>
+                    <NavigationMenuTrigger className='bg-transparent'>
                       {navitem.title}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -89,7 +98,7 @@ export default function NavigationMenuDemo() {
                         ))}
                       </ul>
                     </NavigationMenuContent>
-                  </>
+                  </div>
                 )
               )}
             </NavigationMenuItem>

@@ -61,6 +61,21 @@ export interface Testmonial{
   icon: any;
 }
 
+export interface CompanyValues {
+  title: string;
+  small_description: string;
+  description: string;
+}
+
+export interface Team {
+  image: any;
+  position: string;
+  name: string;
+  linkedin: string;
+  email: string;
+}
+
+
 export interface ServiceProps {
   params: { slug: string };
 };

@@ -1,74 +1,124 @@
 import React from 'react';
+import Picture1 from '../../../public/assets/team/image 9.png';
+import Picture2 from '../../../public/assets/team/image.png';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { company_values, team } from '@/constants/data';
+import { LiaLinkedinIn } from 'react-icons/lia';
+import Link from 'next/link';
+import { BiEnvelope } from 'react-icons/bi';
+import { BsEnvelope, BsEnvelopeAtFill, BsLinkedin } from 'react-icons/bs';
 
 function AboutUsPage() {
   return (
-    <div className="font-sans bg-white min-h-screen py-10">
-      {/* Top Section with Images and Text */}
-      <div className="flex flex-wrap justify-center items-start gap-8 max-w-6xl mx-auto">
-        <div className="flex-1 min-w-[320px] max-w-[420px]">
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="Team" className="w-full rounded-xl object-cover h-[220px]" />
-        </div>
-        <div className="flex-1 min-w-[320px] max-w-[420px] mt-10">
-          <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5" alt="Happy Team" className="w-full rounded-xl object-cover h-[220px]" />
-        </div>
-        <div className="flex-2 min-w-[320px] max-w-[500px] ml-6">
-          <div className="text-[#F26522] font-semibold text-[15px] mb-2">Offshore Development Teams</div>
-          <div className="text-sm mb-2">
-            <a href="#" className="font-semibold">
-              At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.
-            </a>
+    <div className="px-16 py-10">
+      <div className="grid grid-cols-2 gap-2 ">
+        <Image src={Picture1} alt="Picture1" />
+        <div className="text-sm space-y-4">
+          <div className="text-secondary uppercase font-bold">
+            It started with a vision
           </div>
-          <div className="text-sm">
-            <a href="#" className="font-semibold">
-              At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.
-            </a>
+          <div>
+            At Vision5 Tech, we help businesses cut costs and scale faster with
+            expert offshore development teams and tailored technology solutions.
+            From Microsoft Power Platform to secure full stack development, we
+            deliver innovation you can trust — at a fraction of the cost.
+          </div>
+          <div>
+            At Vision5 Tech, we help businesses cut costs and scale faster with
+            expert offshore development teams and tailored technology solutions.
+            From Microsoft Power Platform to secure full stack development, we
+            deliver innovation you can trust — at a fraction of the cost.
+          </div>
+          <div>
+            At Vision5 Tech, we help businesses cut costs and scale faster with
+            expert offshore development teams and tailored technology solutions.
+            From Microsoft Power Platform to secure full stack development, we
+            deliver innovation you can trust — at a fraction of the cost.
           </div>
         </div>
       </div>
-
-      {/* About Us Section */}
-      <div className="flex items-center mt-16 max-w-6xl mx-auto gap-8">
-        <div className="bg-[#1A2669] w-8 h-16 rounded-lg mr-4" />
-        <h1 className="text-[#1A2669] font-bold text-4xl m-0">About Us</h1>
+      <div className="grid grid-cols-3 -mt-20 ">
+        <div className="mt-20">
+          <div className="w-20 h-28 bg-primary mx-auto"></div>
+          <div className="text-center text-primary uppercase font-bold text-5xl mt-2">
+            About Us
+          </div>
+        </div>
+        <Image src={Picture2} alt="Picture2" />
+        <div className="text-sm space-y-4">
+          <div>
+            At Vision5 Tech, we help businesses cut costs and scale faster with
+            expert offshore development teams and tailored technology solutions.
+            From Microsoft Power Platform to secure full stack development, we
+            deliver innovation you can trust — at a fraction of the cost.
+          </div>
+          <div>
+            At Vision5 Tech, we help businesses cut costs and scale faster with
+            expert offshore development teams and tailored technology solutions.
+            From Microsoft Power Platform to secure full stack development, we
+            deliver innovation you can trust — at a fraction of the cost.
+          </div>
+          <div>
+            At Vision5 Tech, we help businesses cut costs and scale faster with
+            expert offshore development teams and tailored technology solutions.
+          </div>
+          <Button>
+            <Link href="/contact-us">Book Us Now</Link>
+          </Button>
+        </div>
       </div>
-
-      {/* Center Section with Text and Button */}
-      <div className="flex flex-wrap justify-center items-center gap-8 max-w-6xl mx-auto mt-8">
-        <div className="flex-1 min-w-[320px] max-w-[420px]">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Group Smiling" className="w-full rounded-xl object-cover h-[220px]" />
-        </div>
-        <div className="flex-2 min-w-[320px] max-w-[500px]">
-          <div className="text-[#222] text-[15px] mb-2">
-            At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.
-          </div>
-          <div className="text-[#222] text-[15px] mb-6">
-            At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.
-          </div>
-          <button className="bg-[#1A2669] text-white rounded-lg px-8 py-3 font-semibold text-lg hover:bg-[#16205a] transition">Learn More</button>
+      <div className="h-screen flex justify-center items-center">
+        <div className="grid grid-cols-2 gap-10">
+          {company_values.map((value) => (
+            <div
+              key={value.title}
+              className="bg-primary even:bg-secondary p-10 rounded-lg "
+            >
+              <div className="text-secondary even:text-primary  uppercase font-bold">
+                {value.title}
+              </div>
+              <div className="text-white mb-4 text-2xl ">
+                {value.small_description}
+              </div>
+              <div className="text-sm text-white/80">{value.description}</div>
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* Mission and Vision Section */}
-      <div className="flex flex-wrap justify-between gap-8 max-w-6xl mx-auto mt-16">
-        {/* Mission */}
-        <div className="bg-[#1A2669] text-white rounded-2xl p-8 flex-1 min-w-[320px] max-w-[470px]">
-          <div className="text-[#F26522] font-semibold text-[15px] mb-2">Our Mission</div>
-          <div className="font-bold text-lg mb-3">
-            Elevating business success through forward thinking IT solutions, professional training, and technical partnerships
-          </div>
-          <div className="text-[15px]">
-            At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.
-          </div>
+      <div>
+        <div className="text-center text-primary uppercase font-bold text-3xl mb-2">
+          Meet Our Team
         </div>
-        {/* Vision */}
-        <div className="bg-[#F26522] text-white rounded-2xl p-8 flex-1 min-w-[320px] max-w-[470px]">
-          <div className="text-[#1A2669] font-semibold text-[15px] mb-2">Our Vision</div>
-          <div className="font-bold text-lg mb-3">
-            Elevating business success through forward thinking IT solutions, professional training, and technical partnerships
-          </div>
-          <div className="text-[15px]">
-            At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.
-          </div>
+        <div className="text-center text-primary/80 mb-12 text-sm w-2/3 mx-auto ">
+          Here are the people who make it all happen. We are a team of
+          passionate individuals who are dedicated to delivering the best
+          possible service to our clients.{' '}
+        </div>
+        <div className="grid grid-cols-3 gap-10">
+          {team.map((member, index) => (
+            <div key={index} className="relative">
+              <Image
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 w-full bg-primary/30  px-10 py-5 flex justify-between items-center">
+                <div className="space-y-2">
+                  <div className="text-white text-sm">{member.position}</div>
+                  <div className="text-white text-sm">{member.name}</div>
+                </div>
+                <div className="flex gap-4">
+                  <Link href={member.linkedin} target="_blank">
+                    <BsLinkedin className="text-white text-xl hover:text-white/80" />
+                  </Link>
+                  <Link href={`mailto:${member.email}`} target="_blank">
+                    <BsEnvelopeAtFill className="text-white text-xl hover:text-white/80" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

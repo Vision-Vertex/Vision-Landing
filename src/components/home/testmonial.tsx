@@ -31,10 +31,24 @@ function testmonial() {
           width={200}
           height={150}
         />
-        {/* <div className="z-40 w-1/2 px-5 pt-10">
-          <div className='text-xs text-white'>" {testimonialList[0].quote} "</div>
-          <div></div>
-        </div> */}
+        <div className='flex items-center gap-6'>
+          <div className="ml-28 flex flex-col items-center justify-center">
+            <Image
+              src={testimonialList[0].image}
+              alt="Icon"
+              width={100}
+              height={100}
+              className="bg-white mb-5 mt-5"
+            />
+            <div className="h-56 w-2 bg-secondary"></div>
+          </div>
+          <div className="z-40  px-5 pt-10">
+            <div className="text-xs text-white">
+              " {testimonialList[0].quote} "
+            </div>
+            <div className='text-sm text-secondary text-right mt-3 font-bold'> - {testimonialList[0].name}</div>
+          </div>
+        </div>
       </div>
     </div>
   );
