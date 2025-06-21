@@ -1,5 +1,7 @@
 // import { Icons } from '@/components/icons';
 
+import { StaticImageData } from "next/image";
+
 export interface NavItem {
   title: string;
   href: string;
@@ -58,7 +60,8 @@ export interface Stats {
 export interface Testmonial{
   quote: string;
   name: string;
-  icon: any;
+  icon?: any;
+  image: StaticImageData
 }
 
 export interface CompanyValues {
