@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react';
 import {Button} from '@/components/ui/button';
-import Footer from '@/components/layout/footer';
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -10,15 +9,35 @@ const ContactUs = () => {
     message: '',
     phone: '',
   });
-
+ const [message, setMessage] = useState({message:'', type:''});
+ const [loading, setLoading] = useState(false);
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    console.log(formData); // Handle form submission
+    setLoading(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setMessage({message:'Your message has been sent!', type:'success'});
+        setFormData({ firstName: '', lastName: '', email: '', message: '', phone: '' });
+      } else {
+        setMessage({message:'There was an error sending your message.', type:'error'});
+      }
+    } catch (error) {
+      setMessage({message:'There was an error sending your message.', type:'error'});
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -121,14 +140,15 @@ const ContactUs = () => {
       </div>
 
       
-      <div className="col-span-2">
+      <div className="flex justify-between col-span-2">
         <Button
           type="submit"
-          className='py-5 rounded-xl'
-          
+          className='py-5 rounded-xl min-w-[180px]'
+          disabled={loading}
         >
-          Send Us Message
+          {loading ? 'Sending...' : 'Send Us A Message'}
         </Button>
+        <p className={`text-sm ${message.type === 'error'? 'text-red-600':'text-green-600'} mt-2`}>{message.message}</p>
       </div>
     </form>
   </div>
