@@ -4,6 +4,7 @@ import {
   PartnerItem,
   Services,
   Stats,
+  Team,
   Testmonial,
 } from '@/types';
 import Google from '../../public/partners/image 2.png';
@@ -163,31 +164,31 @@ export const services: Services[] = [
     image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2',
     second_headline: 'Why Choose Our Offshore Teams?',
     second_description:
-      'At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.',
+      'As an official Microsoft partner, we deliver secure, scalable implementations of SharePoint, Teams, Power Platform, and Azure integrations. Our solutions include workflow automation, data visualization, and seamless cloud migration.',
     cards: [
       {
         icon: Icon1,
-        title: '24/7 Productivity',
+        title: 'Official Microsoft Partner',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          'Certified expertise for reliable implementations.',
       },
       {
         icon: Icon2,
-        title: 'Skilled Talent Pool',
+        title: 'End-to-End Power Platform Integration',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          'Power BI, Apps, Automate & Virtual Agents.',
       },
       {
         icon: Icon3,
-        title: 'Expertise',
+        title: 'Enterprise Security & Compliance',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          'GDPR, HIPAA, and SOC 2-aligned solutions.',
       },
       {
         icon: Icon4,
-        title: 'Scalability',
+        title: 'Adoption & Training Programs',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          'Ensure maximum ROI on your Microsoft investment.',
       },
     ],
   },
@@ -198,37 +199,37 @@ export const services: Services[] = [
     small_description:
       'Advanced analytics and BI solutions for data-driven decision making',
     description:
-      'We specialize in building custom analytics platforms utilizing powerful tools such as Power BI, Tableau, and SQL to help organizations uncover valuable insights, predict emerging trends, and automate their reporting processes. Our approach begins with a thorough understanding of each client’s unique data landscape and business objectives. By leveraging the advanced capabilities of Power BI and Tableau, we create visually compelling dashboards and reports that present data in a clear and actionable format.',
+      'We build custom analytics platforms with Power BI, Tableau, and SQL to uncover insights, predict trends, and automate reporting.',
     button1: '/',
     button2: '/',
     image: Picture1,
     second_headline: 'Why Choose Our Offshore Teams?',
     second_description:
-      'At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.',
+      'From ETL pipelines to interactive dashboards, we create tailored solutions that turn complex data into clear business value.',
     cards: [
       {
         icon: Icon1,
-        title: '24/7 Productivity',
+        title: 'AI-Enhanced Analytics',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          'Machine learning integration.',
       },
       {
         icon: Icon2,
-        title: 'Skilled Talent Pool',
+        title: 'Real-Time Dashboards',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          'Power BI and custom visualization.',
       },
       {
         icon: Icon3,
-        title: 'Expertise',
+        title: 'Data Governance Frameworks',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          'Quality and security assurance.',
       },
       {
         icon: Icon4,
-        title: 'Scalability',
+        title: 'Industry-Specific Models',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          'Retail, healthcare, and finance templates.',
       },
     ],
   },
@@ -239,37 +240,37 @@ export const services: Services[] = [
     small_description:
       'Azure and AWS solutions with CI/CD pipelines for agile delivery  ',
     description:
-      "We specialize in designing, migrating, and managing cloud environments using infrastructure-as-code and automated deployment practices to enhance efficiency and scalability. Our process begins with assessing clients' existing infrastructure to create tailored cloud solutions. During migration, we ensure a seamless transition with minimal downtime. By implementing infrastructure-as-code, we enable consistent management of cloud resources and rapid scaling. Our automated deployment strategies streamline updates while maintaining security and compliance. With ongoing support and optimization, we empower organizations to fully leverage cloud technology for innovation and operational excellence.",
+      "We design, migrate, and manage cloud environments with infrastructure-as-code and automated deployments.",
     button1: '/',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',
     second_description:
-      'At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.',
+      'Full-spectrum cloud services including Kubernetes orchestration, serverless architecture, and cost optimization.',
     cards: [
       {
         icon: Icon1,
-        title: '24/7 Productivity',
+        title: 'Azure Expert Certified Team',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
       {
         icon: Icon2,
-        title: 'Skilled Talent Pool',
+        title: 'DevSecOps Implementation',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
       {
         icon: Icon3,
-        title: 'Expertise',
+        title: 'Multi-Cloud Hybrid Solutions',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
       {
         icon: Icon4,
-        title: 'Scalability',
+        title: '24/7 Performance Monitoring',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
     ],
   },
@@ -278,39 +279,39 @@ export const services: Services[] = [
     headline: 'AI & Automation',
     slug: slugify('AI & Automation'),
     small_description:
-      'Intelligent Automation for Operational Excellence',
+      'AI-driven process automation with RPA and machine learning',
     description:
-      'We implement chatbots, document processing AI, and workflow automation to significantly reduce costs and minimize errors in business operations. Our solutions are designed to enhance efficiency by automating routine tasks, allowing organizations to allocate resources more effectively. Chatbots provide instant support and streamline customer interactions, while document processing AI automates data extraction and validation, ensuring accuracy and speed. Additionally, our workflow automation tools optimize processes by eliminating bottlenecks and improving collaboration across teams. By integrating these technologies, we help businesses achieve greater operational efficiency and drive cost savings, enabling them to focus on strategic initiatives and growth.',
+      'We implement chatbots, document processing AI, and workflow automation to reduce costs and errors.',
     button1: '/',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',
     second_description:
-      'At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.',
+      'Custom solutions combining Microsoft AI Builder, AWS SageMaker, and UiPath for end-to-end automation.',
     cards: [
       {
         icon: Icon1,
-        title: '24/7 Productivity',
+        title: 'Pre-Built Industry Models',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
       {
         icon: Icon2,
-        title: 'Skilled Talent Pool',
+        title: 'Seamless Microsoft 365 Integration',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
       {
         icon: Icon3,
-        title: 'Expertise',
+        title: 'Process Mining Capabilities',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
       {
         icon: Icon4,
-        title: 'Scalability',
+        title: 'Change Management Support',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
     ],
   },
@@ -321,37 +322,201 @@ export const services: Services[] = [
     small_description:
       'Proactive security strategies for cloud and hybrid environments ',
     description:
-      "We deliver comprehensive compliance audits, penetration testing, and 24/7 threat monitoring to enhance our clients' cybersecurity posture. Our compliance audits ensure that organizations meet relevant regulations and standards, identifying gaps and providing actionable recommendations for improvement. Through rigorous penetration testing, we simulate cyberattacks to uncover vulnerabilities in systems and applications, enabling proactive remediation. Additionally, our round-the-clock threat monitoring services detect and respond to potential security incidents in real time, ensuring that clients can mitigate risks before they escalate. By integrating these services, we provide a robust cybersecurity framework that protects sensitive data and fosters confidence in organizational security practices.",
+      "We deliver compliance audits, penetration testing, and 24/7 threat monitoring.",
     button1: '/',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',
     second_description:
-      'At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore development teams and tailored technology solutions. From Microsoft Power Platform to secure full stack development, we deliver innovation you can trust — at a fraction of the cost.',
+      'Comprehensive services including Zero Trust implementation, SIEM configuration, and security awareness training.',
     cards: [
       {
         icon: Icon1,
-        title: '24/7 Productivity',
+        title: 'Microsoft Security Partner',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
       {
         icon: Icon2,
-        title: 'Skilled Talent Pool',
+        title: 'GDPR/HIPAA Compliance Specialists',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
       {
         icon: Icon3,
-        title: 'Expertise',
+        title: 'Cloud-Native Protection',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
       },
       {
         icon: Icon4,
-        title: 'Scalability',
+        title: 'Incident Response Readiness',
         description:
-          'Access top developers, PMs, and QA experts from Ethiopia and India for 24/7 productivity and major cost savings.',
+          '.',
+      },
+    ],
+  },
+  {
+    icon: Icon5,
+    headline: 'Java & Full Stack Development',
+    slug: slugify('Java & Full Stack Development'),
+    small_description:
+      'Robust solutions with Spring Boot, React, and microservices.',
+    description:
+      "We build scalable web applications with modern Java frameworks and cloud-native architectures.",
+    button1: '/',
+    button2: '/',
+    image: Picture2,
+    second_headline: 'Why Choose Our Offshore Teams?',
+    second_description:
+      'End-to-end development services from API design to progressive web apps.',
+    cards: [
+      {
+        icon: Icon1,
+        title: 'Java Experts (Spring/Quarkus)',
+        description:
+          '.',
+      },
+      {
+        icon: Icon2,
+        title: 'React/Angular Specialists',
+        description:
+          '.',
+      },
+      {
+        icon: Icon3,
+        title: 'CI/CD Pipeline Integration',
+        description:
+          '.',
+      },
+      {
+        icon: Icon4,
+        title: 'Legacy System Modernization',
+        description:
+          '.',
+      },
+    ],
+  },
+    {
+    icon: Icon5,
+    headline: 'App Development',
+    slug: slugify('Java & Full Stack Development'),
+    small_description:
+      'From low-code Power Apps to native cross-platform solutions.',
+    description:
+      "We develop user-centric applications with Flutter, React Native, and .NET MAUI.",
+    button1: '/',
+    button2: '/',
+    image: Picture2,
+    second_headline: 'Why Choose Our Offshore Teams?',
+    second_description:
+      'Full lifecycle development including UX design, testing, and App Store deployment.',
+    cards: [
+      {
+        icon: Icon1,
+        title: 'Power Platform Integration',
+        description:
+          '.',
+      },
+      {
+        icon: Icon2,
+        title: 'Cross-Platform Capabilities',
+        description:
+          '.',
+      },
+      {
+        icon: Icon3,
+        title: 'IoT & Wearable Tech Experience',
+        description:
+          '.',
+      },
+      {
+        icon: Icon4,
+        title: 'App Store Optimization',
+        description:
+          '.',
+      },
+    ],
+  },
+    {
+    icon: Icon5,
+    headline: 'Training',
+    slug: slugify('Training'),
+    small_description:
+      ' Hands-on programs for Microsoft, cloud, and development skills.',
+    description:
+      "We offer certification prep and real-world project experience.",
+    button1: '/',
+    button2: '/',
+    image: Picture2,
+    second_headline: 'Why Choose Our Offshore Teams?',
+    second_description:
+      'Corporate and individual training in Power Platform, Azure, cybersecurity, and more.',
+    cards: [
+      {
+        icon: Icon1,
+        title: 'Microsoft Learning Partner',
+        description:
+          '.',
+      },
+      {
+        icon: Icon2,
+        title: 'Cloud Lab Environments',
+        description:
+          '.',
+      },
+      {
+        icon: Icon3,
+        title: 'Job Placement Assistance',
+        description:
+          '.',
+      },
+      {
+        icon: Icon4,
+        title: 'Custom Corporate Programs',
+        description:
+          '.',
+      },
+    ],
+  },
+  {
+    icon: Icon5,
+    headline: 'Freelancing',
+    slug: slugify('Freelancing'),
+    small_description:
+      'Vetted freelancers for short-term projects.',
+    description:
+      "Access skilled professionals in development, data, and cloud within 48 hours.",
+    button1: '/',
+    button2: '/',
+    image: Picture2,
+    second_headline: 'Why Choose Our Offshore Teams?',
+    second_description:
+      'Our platform connects you with pre-screened experts for project-based work.',
+    cards: [
+      {
+        icon: Icon1,
+        title: 'Rigorous Vetting Process',
+        description:
+          '.',
+      },
+      {
+        icon: Icon2,
+        title: 'Microsoft Technology Experts',
+        description:
+          '.',
+      },
+      {
+        icon: Icon3,
+        title: 'Hourly or Project-Based Contracts',
+        description:
+          '.',
+      },
+      {
+        icon: Icon4,
+        title: 'Dedicated Account Management',
+        description:
+          '.',
       },
     ],
   },
