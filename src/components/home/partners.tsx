@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 function partners() {
   return (
-    <div className="h-screen grid grid-cols-2 gap-10 p-4 md:px-14 md:py-7 items-center">
-      <div className="rounded-sm bg-primary w-full h-full flex flex-col space-y-4  justify-center px-10">
+    <div className="md:h-screen grid grid-cols-1 md:grid-cols-2 gap-10 p-4 md:px-14 md:py-7 items-center">
+      <div className="rounded-sm bg-primary py-5 w-full h-full flex flex-col space-y-4  justify-center px-10">
         <div className="space-y-2">
           <div className="pre-header-secondary uppercase font-bold">
             Our Partners

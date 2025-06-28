@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Logo from '../../../public/logos/Vision5 Logo_O1.svg';
+import VisionLogo from '../../../public/logos/vision.svg';
 
 import { cn } from '@/lib/utils';
 // import { Icons } from "@/components/icons"
@@ -31,7 +32,8 @@ export default function NavigationMenuDemo() {
       isHomePage ? "bg-accent" : "bg-white"
     )}>
       <Link href={'/'}>
-        <Image src={Logo} width={110} height={110} alt="Logo" />
+        <Image className=' hidden md:block' src={Logo} width={110} height={110} alt="Logo" />
+        <Image className='md:hidden' src={VisionLogo} width={110} height={110} alt="Logo" />
       </Link>
       <div className="flex gap-10">
         <NavigationMenu>

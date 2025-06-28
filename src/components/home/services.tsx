@@ -39,14 +39,14 @@ function ServicesList() {
       style={{ height: `calc(${services.length} * 100vh)` }}
     >
       <div
-        className="sticky top-0 h-screen px-28 py-10 bg-white z-10"
+        className="sticky top-0 h-screen px-6 md:px-28 py-10 bg-white z-10"
         style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.01)' }}
       >
         <h1 className="text-3xl text-primary font-bold text-center mb-5">
           Our Services
         </h1>
         <div className="grid grid-cols-12 gap-10">
-          <div className="col-span-9">
+          <div className="col-span-12 md:col-span-9">
             <div className="flex gap-2 items-center mb-2">
               <div className="bg-primary w-2 h-5"></div>
               <div className="text-secondary font-medium">
@@ -70,7 +70,7 @@ function ServicesList() {
               </Button>
             </div>
           </div>
-          <div className="flex flex-col gap-5 col-span-3 items-end">
+          <div className="hidden md:flex flex-col gap-5 col-span-3 items-end">
             {services.map((serv, index) => (
               <div
                 key={index}

@@ -28,7 +28,7 @@ function Stat() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="bg-accent w-screen grid grid-cols-2 px-28 py-20 gap-20 justify-between mb-24">
+    <div ref={sectionRef} className="bg-accent w-screen grid grid-cols-1 md:grid-cols-2 px-6 md:px-28 py-20 gap-20 justify-between mb-24">
       <div>
         <div className="text-4xl">
           Helping local & international{' '}

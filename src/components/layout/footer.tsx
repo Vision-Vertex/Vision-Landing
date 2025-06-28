@@ -6,9 +6,9 @@ export default function Footer(){
   return (
     <footer className="bg-primary text-gray-300">
       {/* Top section */}
-      <div className=" mx-auto  py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className=" mx-auto  py-12 grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-0">
         {/* About */}
-        <div className='flex flex-col items-center pl-14'>
+        <div className='flex flex-col items-center md:pl-14'>
             <div className='flex flex-col items-start'>
           {/* <h2 className="text-white text-lg font-semibold mb-4">Vision5 Tech</h2> */}
           <div className='bg-primary  h-12 w-full'></div>
@@ -22,7 +22,7 @@ export default function Footer(){
         </div>
 
         {/* Services list */}
-        <div  className='flex flex-col items-center'>
+        <div  className='flex flex-col md:items-center '>
           <div className='flex flex-col items-start'><h3 className="text-white text-lg font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-xs">
             <li>Offshore Development Teams</li>
@@ -35,7 +35,7 @@ export default function Footer(){
         </div>
 
         {/* Socials */}
-        <div  className='flex flex-col items-center'>
+        <div  className='flex flex-col md:items-center'>
           <h3 className="text-white text-lg font-semibold mb-4">Our Socials</h3>
           <div className="flex space-x-4 text-xl">
             <a href="#" aria-label="Twitter" className="hover:text-white">
