@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  swcMinify: false,
   experimental: {
-    runtime: 'nodejs', // Force Node.js runtime instead of Edge
+    runtime: 'nodejs',
   },
   images: {
-    unoptimized: true, // Avoid sharp
+    unoptimized: true,
   },
 };
 
