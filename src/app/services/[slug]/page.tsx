@@ -1,14 +1,13 @@
-"use client";
-import React from 'react';
+import React, { JSX } from 'react';
 import { services } from '@/constants/data';
 import { notFound } from 'next/navigation';
-import { useRouter } from 'next/navigation';
-import { ServiceProps } from '@/types/index';
 import { Button } from '@/components/ui/button';
 
-function ServicesPage({ params }: ServiceProps) {
+
+
+function ServicesPage(props: any) {
+  const { params, searchParams } = props;
   const service = services.find((s) => s.slug === params.slug);
-  const router = useRouter();
   if (!service) return notFound();
 
   return (
@@ -23,7 +22,13 @@ function ServicesPage({ params }: ServiceProps) {
             {service.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
-            <button className="bg-[#1A2669] text-white rounded-lg px-6 py-2 font-semibold text-base hover:bg-[#16205a] transition w-full sm:w-auto" onClick={() => router.push(service.button1)}>Get in touch</button>
+            {/* Replace router.push with a normal link */}
+            <a
+              className="bg-[#1A2669] text-white rounded-lg px-6 py-2 font-semibold text-base hover:bg-[#16205a] transition w-full sm:w-auto text-center"
+              href={service.button1}
+            >
+              Get in touch
+            </a>
             <button className="text-[#F26522] font-semibold text-base hover:underline w-full sm:w-auto">Start Now &gt;</button>
           </div>
         </div>
@@ -108,4 +113,5 @@ function ServicesPage({ params }: ServiceProps) {
 }
 
 export default ServicesPage;
-        
+
+

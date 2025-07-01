@@ -89,7 +89,7 @@ export default function NavigationMenuDemo() {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                        {navitem.components.map((component: any) => (
+                        {navitem.components?.map((component: any) => (
                           <ListItem
                             key={component.title}
                             title={component.title}
