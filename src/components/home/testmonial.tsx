@@ -6,7 +6,7 @@ import { testmonial as testimonialList } from '@/constants/data';
 
 function testmonial() {
   return (
-    <div className="h-screen grid grid-cols-2 gap-24 px-28 py-10">
+    <div className="h-screen grid grid-cols-1 md:grid-cols-2 gap-24 px-6 md:px-28 py-10">
       <div className="space-y-2 mt-10">
         <div className="font-medium text-secondary uppercase">Testmonials</div>
         <div className="text-4xl text-primary font-medium">
@@ -27,12 +27,12 @@ function testmonial() {
         <Image
           src={TestmonialIcon}
           alt="Icon"
-          className="w-full h-[40rem] absolute -z-10"
+          className="w-full h-[40rem] absolute -z-10 md:block hidden"
           width={200}
           height={150}
         />
         <div className='flex items-center gap-6'>
-          <div className="ml-28 flex flex-col items-center justify-center">
+          <div className="ml-28 flex flex-col items-center justify-center md:block hidden">
             <Image
               src={testimonialList[0].image}
               alt="Icon"
@@ -40,10 +40,10 @@ function testmonial() {
               height={100}
               className="bg-white mb-5 mt-5"
             />
-            <div className="h-56 w-2 bg-secondary"></div>
+            <div className="h-56 w-2 bg-secondary "></div>
           </div>
           <div className="z-40  px-5 pt-10">
-            <div className="text-xs text-white">
+            <div className="text-xs text-black  md:text-white">
               " {testimonialList[0].quote} "
             </div>
             <div className='text-sm text-secondary text-right mt-3 font-bold'> - {testimonialList[0].name}</div>
