@@ -27,11 +27,11 @@ function testmonial() {
         <Image
           src={TestmonialIcon}
           alt="Icon"
-          className="w-full h-[40rem] absolute -z-10 md:block hidden"
+          className="w-full h-[45rem] absolute -z-10 md:block hidden"
           width={200}
           height={150}
         />
-        <div className='flex items-start gap-6 h-[40rem]'>
+        <div className='flex items-start gap-6 h-[45rem] pt-10'>
           <div className="ml-28 flex flex-col items-center justify-center md:block hidden">
             <Image
               src={testimonialList[0].image}
