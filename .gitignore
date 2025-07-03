@@ -28,6 +28,8 @@ coverage/
 .env.development.local
 .env.test.local
 .env.production.local
+.env.production
+
 
 # Typescript
 *.tsbuildinfo
@@ -45,7 +47,7 @@ tailwind.config.ts
 .next/cache/
 
 # Optional: lockfiles (if using only one, comment others)
-package-lock.json
+# package-lock.json
 # yarn.lock
 # pnpm-lock.yaml
 
