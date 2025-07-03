@@ -37,7 +37,7 @@ function partners() {
       <div className="grid grid-cols-3 gap-3 mx-5">
         {partneritems.map((partner, index) => (
           <div className="odd:bg-accent odd:rounded-xl" key={index}>
-            <Image
+            <img
               src={partner.path}
               alt={partner.alt}
               className="py-4 mx-auto"

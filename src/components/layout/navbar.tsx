@@ -32,8 +32,8 @@ export default function NavigationMenuDemo() {
       isHomePage ? "bg-accent" : "bg-white"
     )}>
       <Link href={'/'}>
-        <Image className=' hidden md:block' src={Logo} width={110} height={110} alt="Logo" />
-        <Image className='md:hidden' src={VisionLogo} width={110} height={110} alt="Logo" />
+        <img className=' hidden md:block' src='/logos/Vision5 Logo_O1.svg' width={110} height={110} alt="Logo" />
+        <img className='md:hidden' src='/logos/vision.svg' width={110} height={110} alt="Logo" />
       </Link>
       <div className="flex gap-10">
         <NavigationMenu>

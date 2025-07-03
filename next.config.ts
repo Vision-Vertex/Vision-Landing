@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   images: {
     domains: ['images.unsplash.com'],
-    
+    unoptimized: true,
   },
 };
 
