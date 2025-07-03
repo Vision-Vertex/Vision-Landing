@@ -53,7 +53,7 @@ function ServicesList() {
                 {services[activeIndex].headline}
               </div>
             </div>
-            <img
+            <Image
               src={services[activeIndex].image}
               alt={services[activeIndex].headline}
               className="w-full"
@@ -84,7 +84,7 @@ function ServicesList() {
                `}
                 style={{ width: 56, height: 56 }}
               >
-                <img
+                <Image
                   src={serv.icon}
                   alt={serv.headline}
                   className={`transition-all duration-200 ${

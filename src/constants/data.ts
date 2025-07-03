@@ -15,6 +15,10 @@ import Icon4 from '../../public/icons/image 4.png';
 import Icon5 from '../../public/icons/image 5.png';
 import Picture1 from '../../public/images/Rectangle 34 (1).png';
 import Picture2 from '../../public/images/Rectangle 34.png';
+import TestmonialLogos from '../../public/logos/hijrah.webp';
+import Team1 from '../../public/assets/team/image (1).png';
+import Team2 from '../../public/assets/team/image (2).png';
+import Team3 from '../../public/assets/team/image copy.png';
 import Partner1 from '../../public/partners/cropped-output-onlinepngtools-2.webp';
 import Partner2 from '../../public/partners/jem.png';
 import Partner3 from '../../public/partners/photo_2025-06-19 17.40.15.jpeg';
@@ -544,7 +548,7 @@ export const testmonial: Testmonial[] = [
     quote:
       "We are incredibly grateful to Vision5 Tech LLC for developing a customized donation tracking application during one of the most critical times in our organization's history—when we purchased our new center. Their team not only delivered a user-friendly and reliable solution, but they also truly understood our community-driven mission. The application helped us manage and track hundreds of contributions with ease, transparency, and accuracy. It has been a game-changer in our fundraising and reporting efforts. We couldn't be more pleased with the professionalism, responsiveness, and technical expertise of Vision5 Tech. We highly recommend them to any organization looking for trusted IT solutions.",
     name: 'First Hijrah Foundation Board',
-    image: "/logos/hijrah.webp",
+    image: TestmonialLogos,
   },
 ];
 
@@ -567,35 +571,35 @@ export const company_values: CompanyValues[] = [
 
 export const team: Team[] = [
   {
-    image: '/assets/team/image (1).png',
+    image: Team1,
     position: 'Vision 1',
     name: 'John Doe',
     linkedin: 'https://www.linkedin.com/in/john-doe-1234567890',
     email: 'john.doe@example.com',
   },
   {
-    image: '/assets/team/image (2).png',
+    image: Team2,
     position: 'Vision 2',
     name: 'John Doe',
     linkedin: 'https://www.linkedin.com/in/john-doe-1234567890',
     email: 'john.doe@example.com',
   },
   {
-    image: '/assets/team/image copy.png',
+    image: Team3,
     position: 'Vision 3',
     name: 'John Doe',
     linkedin: 'https://www.linkedin.com/in/john-doe-1234567890',
     email: 'john.doe@example.com',
   },
   {
-    image: '/assets/team/image (1).png',
+    image: Team1,
     position: 'Vision 4',
     name: 'John Doe',
     linkedin: 'https://www.linkedin.com/in/john-doe-1234567890',
     email: 'john.doe@example.com',
   },
   {
-    image: '/assets/team/image (2).png',
+    image: Team2,
     position: 'Vision 5',
     name: 'John Doe',
     linkedin: 'https://www.linkedin.com/in/john-doe-1234567890',

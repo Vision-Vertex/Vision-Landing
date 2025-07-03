@@ -32,8 +32,8 @@ export default function NavigationMenuDemo() {
       isHomePage ? "bg-accent" : "bg-white"
     )}>
       <Link href={'/'}>
-        <img className=' hidden md:block' src='/logos/Vision5 Logo_O1.svg' width={110} height={110} alt="Logo" />
-        <img className='md:hidden' src='/logos/vision.svg' width={110} height={110} alt="Logo" />
+        <Image className=' hidden md:block' src={Logo} width={110} height={110} alt="Logo" />
+        <Image className='md:hidden' src={VisionLogo} width={110} height={110} alt="Logo" />
       </Link>
       <div className="flex gap-10">
         <NavigationMenu>
@@ -77,8 +77,8 @@ export default function NavigationMenuDemo() {
             <NavigationMenuItem className='flex items-center'>
               {navItems.map((navitem) =>
                 navitem.link ? (
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle() + ' bg-transparent'} key={navitem.title}>
-                    <Link href={navitem.href}>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle() + ' bg-transparent'} key={navitem.title}>
+                    <Link href={navitem.href} passHref>
                       {navitem.title}
                     </Link>
                   </NavigationMenuLink>
@@ -91,7 +91,7 @@ export default function NavigationMenuDemo() {
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                         {navitem.components?.map((component: any) => (
                           <ListItem
-                            key={`${component.title}-${component.href}`}
+                            key={component.title}
                             title={component.title}
                             href={component.href}
                           >
@@ -106,7 +106,7 @@ export default function NavigationMenuDemo() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <Button asChild variant={'default'}>
+        <Button variant={'default'}>
           <Link href={'/contact-us'}>Contact Us</Link>
         </Button>
       </div>

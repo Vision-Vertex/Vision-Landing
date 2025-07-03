@@ -24,8 +24,8 @@ function testmonial() {
         <Button variant={'secondary'}>Become our client</Button>
       </div>
       <div className="relative">
-        <img
-          src='/assets/Group 1000001788.svg'
+        <Image
+          src={TestmonialIcon}
           alt="Icon"
           className="w-full h-[40rem] absolute -z-10 md:block hidden"
           width={200}
@@ -33,7 +33,7 @@ function testmonial() {
         />
         <div className='flex items-center gap-6'>
           <div className="ml-28 flex flex-col items-center justify-center md:block hidden">
-            <img
+            <Image
               src={testimonialList[0].image}
               alt="Icon"
               width={100}

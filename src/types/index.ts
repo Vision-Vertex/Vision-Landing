@@ -61,7 +61,7 @@ export interface Testmonial{
   quote: string;
   name: string;
   icon?: any;
-  image: string;
+  image: StaticImageData
 }
 
 export interface CompanyValues {

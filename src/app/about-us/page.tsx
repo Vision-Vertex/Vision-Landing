@@ -13,7 +13,7 @@ function AboutUsPage() {
   return (
     <div className="px-16 py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
-        <img src='/assets/team/image 9.png' alt="Team Picture" className="hidden md:block" />
+        <Image src={Picture1} alt="Picture1" className="hidden md:block" />
         <div className="text-sm space-y-4">
           <div className="text-secondary uppercase font-bold">
             It started with a vision
@@ -46,7 +46,7 @@ function AboutUsPage() {
             About Us
           </div>
         </div>
-        <img src='/assets/team/image 9.png' alt="Team Picture 2" className="hidden md:block" />
+        <Image src={Picture2} alt="Picture2" className="hidden md:block" />
         <div className="text-sm space-y-4 mt-32 md:mt-3">
           <div>
             Recognizing the untapped potential of global talent, we expanded our
