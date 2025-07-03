@@ -31,7 +31,7 @@ function testmonial() {
           width={200}
           height={150}
         />
-        <div className='flex items-center gap-6'>
+        <div className='flex items-start gap-6 h-[40rem]'>
           <div className="ml-28 flex flex-col items-center justify-center md:block hidden">
             <Image
               src={testimonialList[0].image}
