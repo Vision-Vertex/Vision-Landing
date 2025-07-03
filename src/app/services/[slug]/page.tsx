@@ -43,7 +43,7 @@ function ServicesPage(props: any) {
             src={partner.path}
             alt={partner.alt}
             className="h-8 w-auto opacity-90"
-            onClick={() => partner.link && window.open(partner.link, '_blank')}
+            // onClick={() => partner.link && window.open(partner.link, '_blank')}
           />
         ))}
       </div>

@@ -77,8 +77,8 @@ export default function NavigationMenuDemo() {
             <NavigationMenuItem className='flex items-center'>
               {navItems.map((navitem) =>
                 navitem.link ? (
-                  <NavigationMenuLink className={navigationMenuTriggerStyle() + ' bg-transparent'} key={navitem.title}>
-                    <Link href={navitem.href} passHref>
+                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle() + ' bg-transparent'} key={navitem.title}>
+                    <Link href={navitem.href}>
                       {navitem.title}
                     </Link>
                   </NavigationMenuLink>
@@ -91,7 +91,7 @@ export default function NavigationMenuDemo() {
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                         {navitem.components?.map((component: any) => (
                           <ListItem
-                            key={component.title}
+                            key={`${component.title}-${component.href}`}
                             title={component.title}
                             href={component.href}
                           >
@@ -106,7 +106,7 @@ export default function NavigationMenuDemo() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <Button variant={'default'}>
+        <Button asChild variant={'default'}>
           <Link href={'/contact-us'}>Contact Us</Link>
         </Button>
       </div>
