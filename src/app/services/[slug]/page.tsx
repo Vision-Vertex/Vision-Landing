@@ -112,6 +112,10 @@ function ServicesPage(props: any) {
   );
 }
 
+export function generateStaticParams() {
+  return services.map((s) => ({ slug: s.slug }));
+}
+
 export default ServicesPage;
 
 
