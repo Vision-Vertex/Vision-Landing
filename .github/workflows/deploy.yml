@@ -1,4 +1,4 @@
-name: Deploy Static Next.js
+name: Deploy Dynamic Next.js
 on:
   push:
     branches:
@@ -17,27 +17,25 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: |
-          npm run build
-
-      - name: Deploy via rsync
+      - name: Upload project to VPS via SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" ./out/ \
+          rsync -avz --delete -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" ./ \
             ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.TARGET_DIR }}
 
-      - name: Notify Nginx reload
+      - name: Restart PM2 on VPS
         uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: sudo systemctl reload nginx
+          script: |
+            cd ${{ secrets.TARGET_DIR }}
+            npm install
+            npm run build
+            pm2 restart vision5tech || pm2 start npm --name "vision5tech" -- run start
+            pm2 save
