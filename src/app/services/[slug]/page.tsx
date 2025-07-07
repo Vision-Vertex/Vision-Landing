@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 
 function ServicesPage(props: any) {
-  const { params, searchParams } = props;
+  const { params} = props;
   const service = services.find((s) => s.slug === params.slug);
   if (!service) return notFound();
 
