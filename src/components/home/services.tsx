@@ -7,8 +7,10 @@ import Link from 'next/link';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 
 function ServicesList() {
+  // Only use the first 5 services
+  const visibleServices = services.slice(0, 5);
   const [activeIndex, setActiveIndex] = useState(0);
-  const sectionCount = services.length;
+  const sectionCount = visibleServices.length;
   const sectionHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
 
   useEffect(() => {
@@ -36,7 +38,7 @@ function ServicesList() {
   return (
     <div
       className="relative"
-      style={{ height: `calc(${services.length} * 100vh)` }}
+      style={{ height: `calc(${visibleServices.length} * 100vh)` }}
     >
       <div
         className="sticky top-0 h-screen px-6 md:px-28 py-10 bg-white z-10"
@@ -50,28 +52,28 @@ function ServicesList() {
             <div className="flex gap-2 items-center mb-2">
               <div className="bg-primary w-2 h-5"></div>
               <div className="text-secondary font-medium">
-                {services[activeIndex].headline}
+                {visibleServices[activeIndex].headline}
               </div>
             </div>
             <Image
-              src={services[activeIndex].image}
-              alt={services[activeIndex].headline}
+              src={visibleServices[activeIndex].image}
+              alt={visibleServices[activeIndex].headline}
               className="w-full"
               width={100}
               height={100}
             />
             <div className="space-y-1 mt-5">
               <div className="text-primary">
-                {services[activeIndex].small_description}
+                {visibleServices[activeIndex].small_description}
               </div>
-              <div className="text-sm">{services[activeIndex].description}</div>
+              <div className="text-sm">{visibleServices[activeIndex].description}</div>
               <Button variant={'link'}>
-                <Link href={services[activeIndex].slug} className='flex items-center gap-2 '>Learn More <ChevronRight /></Link>
+                <Link href={visibleServices[activeIndex].slug} className='flex items-center gap-2 '>Learn More <ChevronRight /></Link>
               </Button>
             </div>
           </div>
           <div className="hidden md:flex flex-col gap-5 col-span-3 items-end">
-            {services.map((serv, index) => (
+            {visibleServices.map((serv, index) => (
               <div
                 key={index}
                 onClick={() => handleIconClick(index)}
