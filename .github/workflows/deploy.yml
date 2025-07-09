@@ -17,6 +17,11 @@ jobs:
         with:
           node-version: '18.x'
 
+      - name: Create .env.local from EMAILJS_CONFIG
+        env:
+          EMAILJS_CONFIG: ${{ secrets.EMAILJS_CONFIG }}
+        run: echo "$EMAILJS_CONFIG" > .env.local
+
       - name: Upload project to VPS via SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
