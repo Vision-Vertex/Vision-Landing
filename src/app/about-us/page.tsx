@@ -1,17 +1,17 @@
+
+'use client';
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import Picture1 from '../../../public/assets/team/image 9.png';
 import Picture2 from '../../../public/assets/team/image.png';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { company_values, team } from '@/constants/data';
-import { LiaLinkedinIn } from 'react-icons/lia';
-import Link from 'next/link';
-import { BiEnvelope } from 'react-icons/bi';
-import { BsEnvelope, BsEnvelopeAtFill, BsLinkedin } from 'react-icons/bs';
+import { BsEnvelopeAtFill, BsLinkedin } from 'react-icons/bs';
 
 function AboutUsPage() {
-  return (
-    <div className="px-16 py-10">
+ return (
+   <div className="px-6 md:px-16 py-10 space-y-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
         <Image src={Picture1} alt="Picture1" className="hidden md:block" />
         <div className="text-sm space-y-4">
@@ -19,23 +19,23 @@ function AboutUsPage() {
             It started with a vision
           </div>
           <div>
-            Our story began with five friends—seasoned IT professionals from
+            <p>Our story began with five friends—seasoned IT professionals from
             diverse fields like scientific research, HR, and accounting, with
             experience across both government and private sectors. What brought
             us together was a shared purpose: to solve a problem we saw in our
             own communities. Too many students were graduating with technical
             degrees but struggling to land their first job as developers. The
             gap between education and real-world employment was wide, and we set
-            out to close it.
+            out to close it.</p>
           </div>
           <div>
-            We started by offering affordable training programs and
+            <p>We started by offering affordable training programs and
             scholarships, equipping aspiring developers with job readiness
             workshops, technical interview preparation, and guidance for
             stepping into their first roles. As our impact grew, so did our
             ambition. To scale our efforts and reach more people, we founded
             Vision5 Tech LLC, launching professional Microsoft 365 training
-            programs for individuals and organizations.
+            programs for individuals & organizations.</p>
           </div>
         </div>
       </div>
@@ -49,44 +49,61 @@ function AboutUsPage() {
         <Image src={Picture2} alt="Picture2" className="hidden md:block" />
         <div className="text-sm space-y-4 mt-32 md:mt-3">
           <div>
-            Recognizing the untapped potential of global talent, we expanded our
+           <p> Recognizing the untapped potential of global talent, we expanded our
             focus to cultivating skilled developers in Ethiopia and India,
             connecting them with guided job opportunities. What began with small
             freelance projects evolved into a thriving outsourcing operation,
             offering services in cloud computing, full-stack development, AI
-            solutions, automation, and more.
+            solutions, automation, and more.</p>
           </div>
 
           <div>
-            Today, Vision5 Tech operates as a lean, global team across the
+           <p> Today, Vision5 Tech operates as a lean, global team across the
             United States, Ethiopia, and India. We continue to provide
             accessible, high-quality technical training and consultation while
             delivering scalable, cost-effective technology solutions for clients
-            in the U.S. and beyond.
+            in the U.S. and beyond.</p>
           </div>
           <Button>
             <Link href="/contact-us">Book Us Now</Link>
           </Button>
         </div>
       </div>
-      <div className="md:h-screen flex justify-center items-center mt-10 md:mt-0 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {company_values.map((value) => (
-            <div
-              key={value.title}
-              className="bg-primary even:bg-secondary p-10 rounded-lg "
-            >
-              <div className="text-secondary even:text-primary  uppercase font-bold">
-                {value.title}
-              </div>
-              <div className="text-white mb-4 text-2xl ">
-                {value.small_description}
-              </div>
-              <div className="text-sm text-white/80">{value.description}</div>
-            </div>
-          ))}
-        </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 mt-8">
+  {company_values.map((value) => {
+    const lowerTitle = value.title.toLowerCase();
+
+    const bgColor =
+      lowerTitle === 'mission'
+        ? 'bg-[#17215c]'
+        : lowerTitle === 'vision'
+        ? 'bg-[#f45929]'
+        : 'bg-primary';
+
+    const titleColor =
+      lowerTitle === 'mission'
+        ? 'text-[#f45929]'
+        : lowerTitle === 'vision'
+        ? 'text-[#17215c]'
+        : 'text-white';
+
+    return (
+      <div
+        key={value.title}
+        className={`${bgColor} p-8 rounded-lg shadow-lg transition-colors duration-300 mb-10`}
+      >
+        <h3 className={`uppercase font-bold ${titleColor}`}>{value.title}</h3>
+        <h4 className="text-white text-2xl sm:text-xl mb-2">{value.small_description}</h4>
+        <p className="text-white/90 text-sm sm:text-xs">{value.description}</p>
       </div>
+    );
+  })}
+</div>
+
+
+
+
       <div>
         <div className="text-center text-primary uppercase font-bold text-3xl mb-2 mt-10 md:mt-0">
           Meet Our Team

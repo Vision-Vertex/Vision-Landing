@@ -88,7 +88,7 @@ export default function NavigationMenuDemo() {
                       {navitem.title}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                      <ul className="grid w-[230px] gap-3 p-4 md:grid-cols-1 lg:w-[350px] ">
                         {navitem.components?.map((component: any) => (
                           <ListItem
                             key={component.title}
@@ -130,7 +130,7 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className="line-clamp-2 text-sm leading-snug text-primary">
             {children}
           </p>
         </a>
