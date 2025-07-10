@@ -77,10 +77,12 @@ export default function NavigationMenuDemo() {
             <NavigationMenuItem className='flex items-center'>
               {navItems.map((navitem) =>
                 navitem.link ? (
-                  <NavigationMenuLink className={navigationMenuTriggerStyle() + ' bg-transparent'} key={navitem.title}>
-                    <Link href={navitem.href} passHref>
-                      {navitem.title}
-                    </Link>
+                  <NavigationMenuLink
+                    className={navigationMenuTriggerStyle() + ' bg-transparent'}
+                    key={navitem.title}
+                    href={navitem.href}
+                  >
+                    {navitem.title}
                   </NavigationMenuLink>
                 ) : (
                   <div key={navitem.title}>
