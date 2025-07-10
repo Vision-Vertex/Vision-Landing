@@ -16,6 +16,8 @@ import Icon5 from '../../public/icons/image 5.png';
 import Picture1 from '../../public/images/Rectangle 34 (1).png';
 import Picture2 from '../../public/images/Rectangle 34.png';
 import TestmonialLogos from '../../public/logos/hijrah.webp';
+import TestmonialLogos2 from '../../public/logos/tinova.webp';
+import TestmonialLogos3 from '../../public/logos/jem.webp';
 import Team1 from '../../public/assets/team/image (1).png';
 import Team2 from '../../public/assets/team/image (2).png';
 import Team3 from '../../public/assets/team/image copy.png';
@@ -24,6 +26,7 @@ import Partner2 from '../../public/partners/jem.png';
 import Partner3 from '../../public/partners/photo_2025-06-19 17.40.15.jpeg';
 import { UserRound, Users2Icon, icons } from 'lucide-react';
 import { slugify } from '@/lib/slugify';
+
 export const navItems: NavItem[] = [
   {
     title: 'Services',
@@ -31,14 +34,56 @@ export const navItems: NavItem[] = [
     description: 'Home is here',
     components: [
       {
-        service_name: 'A service',
-        href: '/service/A',
-        description: 'A service',
+           service_name: 'Microsoft Ecosystem Solutions',
+        href: '/services/Microsoft-Ecosystem-Solutions',
+        description: 'Microsoft Ecosystem Solutions',
       },
       {
-        service_name: 'B service',
-        href: '/service/B',
-        description: 'B service',
+        service_name: 'Data Analytics & Business Intelligence',
+        href: '/services/Data-Analytics-Business-Intelligence',
+        description: 'Data Analytics & Business Intelligence',
+      },
+      {
+        service_name: 'Cloud & DevOps (Azure & AWS)',
+        href:'/services/Cloud-Devops-Azure-Aws',
+        description: 'Cloud & DevOps (Azure & AWS)',
+
+      },
+      {
+        service_name: 'AI & Automation',
+        href:'/services/Ai-Automation',
+        description: 'AI & Automation',
+
+      }, 
+      {
+        service_name: 'Cybersecurity',
+        href:'/services/Cybersecurity',
+        description: 'Cybersecurity',
+
+      },
+      {
+        service_name: 'Java & Full Stack Development',
+        href:'/services/Java-Full-Stack-Development',
+        description: 'Java & Full Stack Development',
+
+      },
+      {
+        service_name: 'App Development',
+        href:'/services/App-Development',
+        description: 'App Development',
+
+      },
+      {
+        service_name: 'Training',
+        href:'/services/Training',
+        description: 'Training',
+
+      },
+      {
+        service_name: 'Freelancing',
+        href:'/services/Freelancing',
+        description: 'Freelancing',
+
       },
     ],
     link: false,
@@ -87,30 +132,6 @@ export const partners: PartnerItem[] = [
     path: Partner3,
     alt: 'Partner 3',
   },
-  // {
-  //   path: Google,
-  //   alt: 'Google Logo',
-  // },
-  // {
-  //   path: Google,
-  //   alt: 'Google Logo',
-  // },
-  // {
-  //   path: Google,
-  //   alt: 'Google Logo',
-  // },
-  // {
-  //   path: Google,
-  //   alt: 'Google Logo',
-  // },
-  // {
-  //   path: Google,
-  //   alt: 'Google Logo',
-  // },
-  // {
-  //   path: Google,
-  //   alt: 'Google Logo',
-  // },
 ];
 
 export const services: Services[] = [
@@ -550,8 +571,19 @@ export const testmonial: Testmonial[] = [
     name: 'First Hijrah Foundation Board',
     image: TestmonialLogos,
   },
+   {
+    quote:
+      "We are incredibly grateful to Vision5 Tech LLC for developing a customized donation tracking application during one of the most critical times in our organization's history—when we purchased our new center. Their team not only delivered a user-friendly and reliable solution, but they also truly understood our community-driven mission. The application helped us manage and track hundreds of contributions with ease, transparency, and accuracy. It has been a game-changer in our fundraising and reporting efforts. We couldn't be more pleased with the professionalism, responsiveness, and technical expertise of Vision5 Tech. We highly recommend them to any organization looking for trusted IT solutions.",
+    name: 'Tinova',
+    image: TestmonialLogos2,
+  },
+  {
+    quote:
+      "We are incredibly grateful to Vision5 Tech LLC for developing a customized donation tracking application during one of the most critical times in our organization's history—when we purchased our new center. Their team not only delivered a user-friendly and reliable solution, but they also truly understood our community-driven mission. The application helped us manage and track hundreds of contributions with ease, transparency, and accuracy. It has been a game-changer in our fundraising and reporting efforts. We couldn't be more pleased with the professionalism, responsiveness, and technical expertise of Vision5 Tech. We highly recommend them to any organization looking for trusted IT solutions.",
+    name: 'JS',
+    image: TestmonialLogos3,
+  },
 ];
-
 export const company_values: CompanyValues[] = [
   {
     title: 'Mission',
