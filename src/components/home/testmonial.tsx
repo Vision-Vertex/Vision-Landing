@@ -46,7 +46,7 @@ function testmonial() {
           height={150}
         />
       
-        <div className="relative  ml-12 md:px-8 md:py-24">
+        <div className="relative  lg:ml-12 lg:px-8 md:py-24">
   <div
        ref={scrollRef}
         onScroll={handleScroll}
@@ -64,7 +64,7 @@ function testmonial() {
         </div>
 
         <div
-          className="text-primary lg:text-white text-sm leading-relaxed max-w-full max-h-[10rem] overflow-x-auto"
+          className="text-primary lg:text-white text-sm leading-relaxed max-w-full min-h-full lg:max-h-[10rem] lg:overflow-x-auto"
           style={{ scrollbarWidth: "none" }}
         >
           <p className="italic">"{testimonial.quote}"</p>

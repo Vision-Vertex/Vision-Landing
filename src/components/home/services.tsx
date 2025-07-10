@@ -37,7 +37,7 @@ function ServicesList() {
 
   return (
     <div
-      className="relative"
+      className="relative lg:mb-40"
       style={{ height: `calc(${visibleServices.length} * 100vh)` }}
     >
       <div
