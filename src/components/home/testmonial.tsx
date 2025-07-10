@@ -20,8 +20,8 @@ function testmonial() {
 
 
   return (
-    <div className="h-screen grid grid-cols-1 gap-8 lg:grid-cols-2 md:gap-24 px-6 ld:px-28 ">
-      <div className="space-y-2 ml-10 md:m-10">
+    <div className="h-screen grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-24 md:px-14 px-6">
+      <div className="space-y-2">
         <div className="font-medium text-secondary uppercase">Testmonials</div>
         <div className="text-4xl text-primary font-medium">
           See what our client have to say about us
@@ -53,8 +53,8 @@ function testmonial() {
          className="flex gap-12 overflow-x-auto px-4" style={{scrollbarWidth:"none"}}>
           
     {testimonialList.map((testimonial, index) => (
-      <div key={index} className="flex items-start gap-4 max-w-[90%] md:ml-10 flex-shrink-0">
-        <div className="hidden md:flex flex-col items-center">
+      <div key={index} className="flex items-start gap-4 max-w-[100%] lg:mt-3 lg:max-w-[90%] lg:ml-2 flex-shrink-0">
+        <div className="hidden lg:flex flex-col items-center">
           <Image
             src={testimonial.image}
             alt="Client Avatar"
@@ -64,7 +64,7 @@ function testmonial() {
         </div>
 
         <div
-          className="md:text-white text-sm leading-relaxed max-w-full max-h-[10rem] overflow-x-auto"
+          className="text-primary lg:text-white text-sm leading-relaxed max-w-full max-h-[10rem] overflow-x-auto"
           style={{ scrollbarWidth: "none" }}
         >
           <p className="italic">"{testimonial.quote}"</p>

@@ -7,14 +7,15 @@ import AdBanner from '@/components/home/ad';
 
 export default function Home() {
   return (
-    <div>
+    <div className='flex flex-col gap-10'>
       <Hero />
         <Partners />
         <Services/>
         <Stat/>
         <Testmonial/>
+        <div className='px-6 md:px-14'>
         <AdBanner/>
-
+</div>
       {/* <PageContainer>
       </PageContainer> */}
     </div>
