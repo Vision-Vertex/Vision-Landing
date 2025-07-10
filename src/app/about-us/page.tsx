@@ -11,9 +11,15 @@ import { BsEnvelopeAtFill, BsLinkedin } from 'react-icons/bs';
 
 function AboutUsPage() {
  return (
-   <div className="px-6 md:px-16 py-10 space-y-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
-        <Image src={Picture1} alt="Picture1" className="hidden md:block" />
+   <div className="px-6 md:px-16 py-10 space-y-3 lg:space-y-10">
+            <div className="mt-10 mb-10 lg:mb-0 lg:hidden">
+          <div className="w-20 h-28 bg-primary mx-auto"></div>
+          <div className="text-center text-primary uppercase font-bold text-5xl mt-2">
+            About Us
+          </div>
+        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2 ">
+        <Image src={Picture1} alt="Picture1" className="hidden lg:block" />
         <div className="text-sm space-y-4">
           <div className="text-secondary uppercase font-bold">
             It started with a vision
@@ -39,15 +45,15 @@ function AboutUsPage() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 -mt-20 ">
-        <div className="mt-20 hidden md:block">
+      <div className="grid grid-cols-1 lg:grid-cols-3 lg:mt-1 lg:gap-2">
+        <div className="mt-20 hidden lg:block">
           <div className="w-20 h-28 bg-primary mx-auto"></div>
           <div className="text-center text-primary uppercase font-bold text-5xl mt-2">
             About Us
           </div>
         </div>
-        <Image src={Picture2} alt="Picture2" className="hidden md:block" />
-        <div className="text-sm space-y-4 mt-32 md:mt-3">
+        <Image src={Picture2} alt="Picture2" className="hidden lg:block" />
+        <div className="text-sm space-y-4 lg:mt-3 ">
           <div>
            <p> Recognizing the untapped potential of global talent, we expanded our
             focus to cultivating skilled developers in Ethiopia and India,
@@ -93,9 +99,9 @@ function AboutUsPage() {
         key={value.title}
         className={`${bgColor} p-8 rounded-lg shadow-lg transition-colors duration-300 mb-10`}
       >
-        <h3 className={`uppercase font-bold ${titleColor}`}>{value.title}</h3>
-        <h4 className="text-white text-2xl sm:text-xl mb-2">{value.small_description}</h4>
-        <p className="text-white/90 text-sm sm:text-xs">{value.description}</p>
+        <h3 className={`uppercase font-bold text-sm sm:text-base ${titleColor}`}>{value.title}</h3>
+        <h4 className="text-white text-xl sm:text-2xl mb-2 ">{value.small_description}</h4>
+        <p className="text-white/90 text-xs sm:text-sm text-justify">{value.description}</p>
       </div>
     );
   })}
