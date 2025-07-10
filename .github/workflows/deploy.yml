@@ -48,10 +48,12 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.TARGET_DIR }}
-            # install exact deps, thanks to package-lock.json
             npm ci
-            # rebuild production assets
             npm run build
-            # reload if running, otherwise start fresh
-            pm2 restart vision5tech || pm2 start npm --name vision5tech -- run start
+            # ensure PM2 always runs in TARGET_DIR
+            pm2 delete vision5tech || true
+            pm2 start npm \
+            --name vision5tech \
+            --cwd "${PWD}" \
+            -- run start
             pm2 save
