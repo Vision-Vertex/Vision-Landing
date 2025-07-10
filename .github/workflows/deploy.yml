@@ -1,4 +1,5 @@
 name: Deploy Dynamic Next.js
+
 on:
   push:
     branches:
@@ -7,32 +8,39 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js & cache dependencies
         uses: actions/setup-node@v4
         with:
           node-version: '18.x'
+          cache: 'npm'                           # caches ~/.npm and node_modules
 
-      - name: Create .env.local from EMAILJS_CONFIG
+      - name: Create .env.local
         env:
           EMAILJS_CONFIG: ${{ secrets.EMAILJS_CONFIG }}
-        run: echo "$EMAILJS_CONFIG" > .env.local
+        run: |
+          echo "$EMAILJS_CONFIG" > .env.local
 
-      - name: Upload project to VPS via SSH
+      - name: Sync project to VPS
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" ./ \
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
+            ./ \
             ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.TARGET_DIR }}
 
-      - name: Restart PM2 on VPS
+      - name: Install, build & restart on VPS
         uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -40,7 +48,12 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.TARGET_DIR }}
-            npm install
+            npm ci
             npm run build
-            pm2 restart vision5tech || pm2 start npm --name "vision5tech" -- run start
+            # ensure PM2 always runs in TARGET_DIR
+            pm2 delete vision5tech || true
+            pm2 start npm \
+            --name vision5tech \
+            --cwd "${PWD}" \
+            -- run start
             pm2 save
