@@ -1,10 +1,11 @@
 "use client";
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import emailjs from "emailjs-com";
 import PhoneInput, {
-  isValidPhoneNumber,
   getCountryCallingCode,
+  Country,
 } from "react-phone-number-input";
 import { E164Number } from "libphonenumber-js";
 import "react-phone-number-input/style.css";
@@ -18,9 +19,9 @@ const ContactUs = () => {
     phone: "",
   });
 
+  const [selectedCountry, setSelectedCountry] = useState<Country>("US");
   const [message, setMessage] = useState({ message: "", type: "" });
   const [loading, setLoading] = useState(false);
-  const [phoneError, setPhoneError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -32,22 +33,21 @@ const ContactUs = () => {
   const handlePhoneChange = (value: E164Number | undefined) => {
     const phone = value || "";
     setFormData({ ...formData, phone });
-    if (phone && !isValidPhoneNumber(phone)) {
-      setPhoneError("Invalid phone number");
-    } else {
-      setPhoneError(null);
+  };
+
+  type ExtendedCountry = Country | "ZZ";
+
+  const handleCountryChange = (country: ExtendedCountry | undefined) => {
+    if (!country || country == "ZZ") {
+      setSelectedCountry("US");
+      return;
     }
+    setSelectedCountry(country);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-
-    if (formData.phone && !isValidPhoneNumber(formData.phone)) {
-      setPhoneError("Invalid phone number");
-      setLoading(false);
-      return;
-    }
 
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
@@ -74,6 +74,7 @@ const ContactUs = () => {
         message: "",
         phone: "",
       });
+      setSelectedCountry("US");
     } catch (error) {
       console.error("EmailJS failed to send email:", error);
       setMessage({
@@ -91,15 +92,18 @@ const ContactUs = () => {
         <div className="flex flex-col">
           <h1 className="text-3xl font-bold text-primary mb-2">Get In Touch</h1>
           <p className="text-sm text-gray-600 mb-6">
-            At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore
-            development teams and tailored technology solutions.
+            At Vision5 Tech, we help businesses cut costs and scale faster with
+            expert offshore development teams and tailored technology solutions.
           </p>
           <form
             onSubmit={handleSubmit}
             className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 flex-1"
           >
             <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="firstName"
+                className="block text-sm font-medium text-gray-700"
+              >
                 First Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -114,7 +118,10 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="lastName"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Last Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -129,7 +136,10 @@ const ContactUs = () => {
               />
             </div>
             <div className="md:col-span-2">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Email <span className="text-red-500">*</span>
               </label>
               <input
@@ -144,50 +154,71 @@ const ContactUs = () => {
               />
             </div>
             <div className="md:col-span-2">
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Phone Number
               </label>
-              <div className="mt-1">
-                <PhoneInput
-                  international
-                  defaultCountry="ET"
-                  value={formData.phone}
-                  onChange={handlePhoneChange}
-                  placeholder="e.g. +251 911234567"
-                  className="react-phone-input-custom"
+              <div className="flex items-stretch mt-1 rounded-lg overflow-hidden border-none">
+                <div className="bg-accent px-3 py-2 flex items-center">
+                  <PhoneInput
+                    international
+                    country={selectedCountry}
+                    onCountryChange={handleCountryChange}
+                    value={formData.phone}
+                    onChange={handlePhoneChange}
+                    className="react-phone-input-custom"
+                    inputComponent={({ inputRef, ...rest }) => (
+                      <input
+                        ref={inputRef}
+                        {...rest}
+                        style={{
+                          position: "absolute",
+                          left: "-9999px",
+                          height: 1,
+                          width: 1,
+                          opacity: 0,
+                          pointerEvents: "none",
+                        }}
+                      />
+                    )}
+                  />
+                  <style jsx global>
+                    {`
+                      .react-phone-input-custom .PhoneInputCountryIcon {
+                        display: none !important; /* ❌ hides flag */
+                      }
+                    `}
+                  </style>
+
+                  <span className="ml-1">
+                    +{getCountryCallingCode(selectedCountry)}
+                  </span>
+                </div>
+                <input
+                  type="tel"
+                  placeholder="(123) 456-7890"
+                  className="flex-1 px-3 py-2 bg-gray-100 outline-none"
+                  value={formData.phone.replace(
+                    `+${getCountryCallingCode(selectedCountry)}`,
+                    ""
+                  )}
+                  onChange={(e) =>
+                    handlePhoneChange(
+                      `+${getCountryCallingCode(selectedCountry)}${
+                        e.target.value
+                      }` as E164Number
+                    )
+                  }
                 />
-                {phoneError && (
-                  <p className="text-sm text-red-600 mt-1">{phoneError}</p>
-                )}
               </div>
-              <style jsx global>{`
-                .react-phone-input-custom {
-                  width: 100%;
-                }
-                .react-phone-input-custom .PhoneInputInput {
-                  background-color: #f3f4f6;
-                  border-radius: 0.5rem;
-                  padding: 0.5rem 0.75rem;
-                  width: 100%;
-                  border: none;
-                  outline: none;
-                }
-                .react-phone-input-custom .PhoneInputCountry {
-                  display: flex;
-                  align-items: center;
-                }
-                .react-phone-input-custom .PhoneInputCountryIcon {
-                  display: none !important; 
-                }
-                .react-phone-input-custom .PhoneInputCountrySelect {
-                  background-color: #f3f4f6;
-                  border-radius: 0.5rem 0 0 0.5rem;
-                  padding: 0.5rem 0.75rem;
-                }
-              `}</style>
             </div>
             <div className="md:col-span-2">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Message
               </label>
               <textarea
