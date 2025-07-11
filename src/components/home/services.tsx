@@ -59,7 +59,6 @@ function ServicesList() {
       <Image
         src={services[activeIndex].image}
         alt={services[activeIndex].headline}
-        fill
         width={100}
         height={100}
         />
