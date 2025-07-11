@@ -11,14 +11,14 @@ function partners() {
     <div className="md:h-screen grid grid-cols-1 md:grid-cols-2 gap-10 p-4 md:px-14 md:py-7 items-center">
       <div className="rounded-sm bg-primary py-5 w-full h-full flex flex-col space-y-4  justify-center px-10">
         <div className="space-y-2">
-          <div className="pre-header-secondary uppercase font-bold">
+          <div className="pre-header-secondary uppercase font-bold text-xl">
             Our Partners
           </div>
-          <div className="text-3xl text-white">Meet our trusted partners</div>
-          <div className="text-white text-sm">
+          <div className="text-2xl text-white">Meet our trusted partners</div>
+          <div className="text-white text-base text-justify">
             At the core of our success is a network of trusted partners who
             share our commitment to innovation and excellence. These strategic
-            alliances enhance our ability to deliver exceptional IT solutions,
+            alliances enhance our ability to deliver exceptional IT solutions
             as each partner brings unique expertise and resources.
             <br className='my-1'></br>
             By collaborating with industry leaders, we leverage their strengths

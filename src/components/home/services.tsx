@@ -37,7 +37,7 @@ function ServicesList() {
 
   return (
     <div
-      className="relative lg:mb-40"
+      className="relative lg:mb-15"
       style={{ height: `calc(${visibleServices.length} * 100vh)` }}
     >
       <div
@@ -55,13 +55,16 @@ function ServicesList() {
                 {visibleServices[activeIndex].headline}
               </div>
             </div>
-            <Image
-              src={visibleServices[activeIndex].image}
-              alt={visibleServices[activeIndex].headline}
-              className="w-full"
-              width={100}
-              height={100}
-            />
+     <div className="relative w-[900px] h-[350px] mb-4">
+      <Image
+        src={services[activeIndex].image}
+        alt={services[activeIndex].headline}
+        fill
+        className="object-cover rounded"
+        sizes="100vw"
+        />
+        </div>
+
             <div className="space-y-1 mt-5">
               <div className="text-primary">
                 {visibleServices[activeIndex].small_description}

@@ -1,10 +1,34 @@
+'use client';
 import React from 'react';
 import { FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import Image from 'next/image'; 
 import VisionVertex from '../../../public/logos/Vision5 Logo_R_O12.svg';
+import { services } from '@/constants/data';
+import Link from 'next/link';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import router from 'next/router';
 
 export default function Footer() {
+  const [activeIndex, setActiveIndex] = useState(-1);
+   const handleClick = (index: number, slug: string) => {
+    setActiveIndex(index);
+    router.push(`/services/${slug}`);
+  };
+           const services = [
+  { label:'Data Analytics', slug: 'data-analytics'},
+  { label: 'Microsoft Ecosystem Solutions', slug: 'power-platform' },
+  { label: 'Full Stack Agile Development', slug: 'full-stack' },
+  { label: 'Cloud & DevSecOps', slug: 'cloud-devsecops' },
+  { label: 'IT Consulting & Strategy', slug: 'it-consulting' },
+  { label: 'Cybersecurity Solutions', slug: 'cybersecurity' },
+  { label: 'AI & Automation', slug: 'ai-automation' },
+  { label: 'App Development', slug: 'app-development' },
+  { label: 'Training & Upskilling', slug: 'training-upskilling' },
+  { label: 'Freelancing & Outsourcing', slug: 'freelancing-outsourcing' }
+];
   return (
+     
     <footer className="bg-primary text-gray-300">
       <div className="max-w-7xl mx-auto py-12 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start text-sm">
         
@@ -27,20 +51,30 @@ export default function Footer() {
 
         {/* Column 2: Services */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">Services</h3>
-          <ul className="space-y-2 text-xs">
-            <li>Offshore Development Teams</li>
-            <li>Microsoft Power Platform Solutions</li>
-            <li>Full Stack Agile Development</li>
-            <li>DevSecOps &amp; Secure Development</li>
-            <li>Training &amp; Upskilling (Microsoft 365)</li>
-          </ul>
+          <h3 className="text-white text-lg font-semibold mb-4 text-center">Services</h3>
+  
+           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs text-white ">
+        {services.map((service, index) => (
+          <li
+            key={service.slug}
+            className={index === activeIndex ? 'font-bold text-[17215c]' : ''}
+          >
+            <button
+              onClick={() => handleClick(index, service.slug)}
+              className="hover:underline text-left w-full"
+            >
+              {service.label}
+            </button>
+          </li>
+        ))}
+      </ul>
+
         </div>
 
         {/* Column 3: Socials (visible on md and up) */}
         <div className="sm:col-span-2 md:col-span-1">
-          <h3 className="text-white text-lg font-semibold mb-4">Our Socials</h3>
-          <div className="flex space-x-4 text-xl">
+          <h3 className="text-white text-lg font-semibold mb-4 mx-24">Our Socials</h3>
+          <div className="flex space-x-4 text-xl mx-24">
             <a href="#" aria-label="Twitter" className="hover:text-white">
               <FaTwitter />
             </a>
