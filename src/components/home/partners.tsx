@@ -1,8 +1,10 @@
+"use client";
 import React from 'react';
 import { partners as partneritems } from '@/constants/data';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 function partners() {
   return (
@@ -36,14 +38,15 @@ function partners() {
       </div>
       <div className="grid grid-cols-3 gap-3 mx-5">
         {partneritems.map((partner, index) => (
-          <div className="odd:bg-accent odd:rounded-xl" key={index}>
-            <Image
-              src={partner.path}
-              alt={partner.alt}
-              className="py-4 mx-auto"
-              width={80}
-              height={80}
-            />
+          <div className="odd:bg-accent odd:rounded-xl hover:scale-105 hover:shadow-lg transition-transform duration-300 flex items-center justify-center py-6" key={index}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Image src={partner.path} alt={partner.alt} width={80} height={80}
+                className="transition duration-300 hover:filter hover:brightness-75 hover:sepia hover:hue-rotate-180" />
+            </motion.div>
           </div>
         ))}
       </div>
