@@ -55,23 +55,23 @@ function ServicesList() {
                 {visibleServices[activeIndex].headline}
               </div>
             </div>
-     <div className="relative w-[900px] h-[350px] mb-4">
+     
       <Image
         src={services[activeIndex].image}
         alt={services[activeIndex].headline}
         fill
-        className="object-cover rounded"
-        sizes="100vw"
+        width={100}
+        height={100}
         />
-        </div>
+        
 
             <div className="space-y-1 mt-5">
               <div className="text-primary">
                 {visibleServices[activeIndex].small_description}
               </div>
-              <div className="text-sm">{visibleServices[activeIndex].description}</div>
+              <div className="text-base">{visibleServices[activeIndex].description}</div>
               <Button variant={'link'}>
-                <Link href={visibleServices[activeIndex].slug} className='flex items-center gap-2 '>Learn More <ChevronRight /></Link>
+                <Link href={visibleServices[activeIndex].slug} className='flex items-center gap-2 text-base'>Learn More <ChevronRight /></Link>
               </Button>
             </div>
           </div>

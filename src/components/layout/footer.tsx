@@ -6,11 +6,11 @@ import VisionVertex from '../../../public/logos/Vision5 Logo_R_O12.svg';
 import { services } from '@/constants/data';
 import Link from 'next/link';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import router from 'next/router';
+import { useRouter} from 'next/router';
 
 export default function Footer() {
   const [activeIndex, setActiveIndex] = useState(-1);
+  const router = useRouter();
    const handleClick = (index: number, slug: string) => {
     setActiveIndex(index);
     router.push(`/services/${slug}`);
