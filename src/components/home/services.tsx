@@ -37,7 +37,7 @@ function ServicesList() {
 
   return (
     <div
-      className="relative lg:mb-40"
+      className="relative lg:mb-15"
       style={{ height: `calc(${visibleServices.length} * 100vh)` }}
     >
       <div
@@ -56,32 +56,17 @@ function ServicesList() {
                 </div>
                               
               </div>
-<div className="w-full ">
-                <Image
-                  src={visibleServices[activeIndex].image}
-                  alt={visibleServices[activeIndex].headline}
-                  className="w-full h-full rounded-xl object-cover"
-                  width={600}
-                  height={400}
-                />
-              </div>
-              <div className="flex flex-col gap-3">
-                <div className="text-primary text-sm sm:text-base px-2 leading-relaxed text-left break-words">
-                  {visibleServices[activeIndex].small_description}
-                </div>
-
-                <div className="text-sm text-gray-700 leading-relaxed px-2 text-left break-words">
-                  {visibleServices[activeIndex].description}
-                </div>
-
-                <Button variant="link" className="p-0 w-fit">
-                  <Link
-                    href={`/services/${visibleServices[activeIndex].slug}`}
-                    className="flex items-center gap-2 text-sm sm:text-base"
-                  >
-                    Learn More <ChevronRight size={18} />
-                  </Link>
-                </Button>
+            </div>
+            <Image
+              src={visibleServices[activeIndex].image}
+              alt={visibleServices[activeIndex].headline}
+              className="w-full"
+              width={100}
+              height={100}
+            />
+            <div className="space-y-1 mt-5">
+              <div className="text-primary">
+                {visibleServices[activeIndex].small_description}
               </div>
 
               
