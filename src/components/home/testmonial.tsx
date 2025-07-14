@@ -64,7 +64,7 @@ function testmonial() {
         </div>
 
         <div
-          className="text-primary lg:text-white text-base leading-relaxed max-w-full min-h-full lg:max-h-[10rem] lg:overflow-x-auto"
+          className="text-primary lg:text-white text-sm leading-relaxed max-w-full min-h-full lg:max-h-[10rem] lg:overflow-x-auto"
           style={{ scrollbarWidth: "none" }}
         >
           <p className="italic">"{testimonial.quote}"</p>
