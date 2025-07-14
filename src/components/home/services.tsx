@@ -57,7 +57,7 @@ function ServicesList() {
                 </div>
                               
               </div>
-<div className="w-full ">
+<div className="w-full h-[300px] sm:h-[350px] md:h-[320px] ">
                 <Image
                   src={services[activeIndex].image}
                   alt={services[activeIndex].headline}
@@ -100,7 +100,8 @@ function ServicesList() {
                  }
                `}
                 style={{ width: 56, height: 56 }}
-              >
+              > 
+              
                 <Image
                   src={serv.icon}
                   alt={serv.headline}
