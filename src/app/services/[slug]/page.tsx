@@ -3,6 +3,7 @@ import { services } from '@/constants/data';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Icon } from "@iconify/react";
+import Image from 'next/image';
 
 
 function ServicesPage(props: any) {
@@ -12,30 +13,56 @@ function ServicesPage(props: any) {
 
   return (
     <div className="font-sans bg-white min-h-screen py-6 md:py-10">
-      <div className="flex flex-col md:flex-row flex-wrap justify-between items-center max-w-6xl mx-auto gap-8 px-4">
+ <div className="flex flex-col md:flex-row flex-wrap justify-between items-center max-w-6xl mx-auto gap-8 px-4">
         <div className="flex-1 min-w-[0] md:min-w-[320px] max-w-[540px] w-full">
-          <div className="text-[#F26522] font-semibold text-lg mb-2">{service.headline}</div>
-          <h1 className="text-[#1A2669] font-bold text-3xl md:text-4xl mb-4 leading-tight">
-            {service.small_description}
-          </h1>
+          <div
+  className="relative inline-block font-semibold text-[15px] mb-2 overflow-hidden text-[#F26522]"
+>
+  <span>{service.headline}</span>
+  <span
+    className="absolute top-0 left-[-75%] w-1/2 h-full"
+    style={{
+      background: 'linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%)',
+      transform: 'skewX(-25deg)',
+      animation: 'shine 2.5s infinite',
+    }}/>
+   </div>
+
+    <h1 className="relative text-[#1A2669] font-bold text-3xl md:text-4xl mb-4 leading-tight overflow-hidden">
+      <span className="relative z-10">{service.small_description}</span>
+        <span
+         className="absolute top-0 left-[-100%] w-1/2 h-full"
+           style={{
+           background:
+           'linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%)',
+            transform: 'skewX(-2deg)',
+            animation: 'shine 1.5s infinite',}}/>
+      </h1>
           <p className="text-[#222] text-base mb-6">
             {service.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
-            {/* Replace router.push with a normal link */}
-            <a
+                        <a
               className="bg-[#1A2669] text-white rounded-lg px-6 py-2 font-semibold text-base hover:bg-[#16205a] transition w-full sm:w-auto text-center"
               href={service.button1}
             >
               Get in touch
-            </a>
-            <button className="text-[#F26522] font-semibold text-base hover:underline w-full sm:w-auto">Start Now &gt;</button>
+            </a><button className="text-[#F26522] font-semibold text-base hover:underline w-full sm:w-auto">Start Now &gt;</button>
           </div>
+          </div>
+        <div className="col-span-12 md:col-span-6 flex justify-center">
+  <div className="w-full">
+    <Image
+      src={service.image}
+      alt="Team working"
+      className="w-full rounded-xl object-cover h-[220px] sm:h-[260px] md:h-[300px]"
+      width={1400}
+      height={1000}
+    />
+  </div>
+</div>
+
         </div>
-        <div className="flex-1 min-w-[0] md:min-w-[320px] max-w-[420px] w-full flex justify-center">
-          <img src={service.image} alt="Team working" className="w-full rounded-xl object-cover h-[220px] sm:h-[260px] md:h-[300px]" />
-        </div>
-      </div>
       <div className="flex justify-center items-center gap-6 md:gap-8 mt-10 md:mt-12 mb-6 md:mb-8 flex-wrap">
         {service.partners?.map((partner,i) => (
           <img
@@ -43,6 +70,7 @@ function ServicesPage(props: any) {
             src={partner.path}
             alt={partner.alt}
             className="h-8 w-auto opacity-90"
+            
             // onClick={() => partner.link && window.open(partner.link, '_blank')}
           />
         ))}
