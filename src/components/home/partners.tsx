@@ -15,7 +15,7 @@ function partners() {
             Our Partners
           </div>
           <div className="text-2xl text-white">Meet our trusted partners</div>
-          <div className="text-white text-base text-justify">
+          <div className="text-white text-base">
             At the core of our success is a network of trusted partners who
             share our commitment to innovation and excellence. These strategic
             alliances enhance our ability to deliver exceptional IT solutions

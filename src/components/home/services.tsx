@@ -41,7 +41,7 @@ function ServicesList() {
       style={{ height: `calc(${visibleServices.length} * 100vh)` }}
     >
       <div
-        className="sticky top-0 min-h-screen bg-white flex items-center px-4 md:px-14 py-10  z-10"
+        className="sticky top-0 min-h-screen bg-white flex items-center px-4 md:px-14 py-0  z-10"
         style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.01)' }}
       >
         <div className="w-full">
@@ -67,18 +67,18 @@ function ServicesList() {
                 />
               </div>
               <div className="flex flex-col gap-3">
-                <div className="text-primary text-sm sm:text-base px-2 leading-relaxed text-left break-words">
+                <div className="text-primary text-lg px-2 leading-relaxed text-left break-words">
                   {services[activeIndex].small_description}
                 </div>
 
-                <div className="text-sm text-gray-700 leading-relaxed px-2 text-left break-words">
+                <div className="text-base text-gray-700 leading-relaxed px-2 text-left break-words">
                   {services[activeIndex].description}
                 </div>
 
                 <Button variant="link" className="p-0 w-fit">
                   <Link
                     href={`/services/${services[activeIndex].slug}`}
-                    className="flex items-center gap-2 text-sm sm:text-base"
+                    className="flex items-center gap-2 text-base"
                   >
                     Learn More <ChevronRight size={18} />
                   </Link>

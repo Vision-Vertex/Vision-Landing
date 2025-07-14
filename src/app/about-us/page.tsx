@@ -20,8 +20,8 @@ function AboutUsPage() {
         </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2 ">
         <Image src={Picture1} alt="Picture1" className="hidden lg:block" />
-        <div className="text-sm space-y-4">
-          <div className="text-secondary uppercase font-bold">
+        <div className="text-base space-y-4">
+          <div className="text-secondary uppercase font-bold text-lg">
             It started with a vision
           </div>
           <div>
@@ -53,7 +53,7 @@ function AboutUsPage() {
           </div>
         </div>
         <Image src={Picture2} alt="Picture2" className="hidden lg:block" />
-        <div className="text-sm space-y-4 lg:mt-3 ">
+        <div className="text-base space-y-4 lg:mt-3 ">
           <div>
            <p> Recognizing the untapped potential of global talent, we expanded our
             focus to cultivating skilled developers in Ethiopia and India,
@@ -99,9 +99,9 @@ function AboutUsPage() {
         key={value.title}
         className={`${bgColor} p-8 rounded-lg shadow-lg transition-colors duration-300 mb-10`}
       >
-        <h3 className={`uppercase font-bold text-sm sm:text-base ${titleColor}`}>{value.title}</h3>
-        <h4 className="text-white text-xl sm:text-2xl mb-2 ">{value.small_description}</h4>
-        <p className="text-white/90 text-xs sm:text-sm text-justify">{value.description}</p>
+        <h3 className={`uppercase font-bold text-lg ${titleColor}`}>{value.title}</h3>
+        <h4 className="text-white text-2xl mb-2 ">{value.small_description}</h4>
+        <p className="text-white/90 text-base">{value.description}</p>
       </div>
     );
   })}
@@ -114,7 +114,7 @@ function AboutUsPage() {
         <div className="text-center text-primary uppercase font-bold text-3xl mb-2 mt-10 md:mt-0">
           Meet Our Team
         </div>
-        <div className="text-center text-primary/80 mb-12 text-sm w-full md:w-2/3 mx-auto ">
+        <div className="text-center text-primary/80 mb-12 text-base w-full md:w-2/3 mx-auto ">
           Here are the people who make it all happen. We are a team of
           passionate individuals who are dedicated to delivering the best
           possible service to our clients.{' '}

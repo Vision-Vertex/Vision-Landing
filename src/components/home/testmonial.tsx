@@ -26,7 +26,7 @@ function testmonial() {
         <div className="text-4xl text-primary font-medium">
           See what our client have to say about us
         </div>
-        <div className="text-sm">
+        <div className="text-base">
           But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was born and I will give you a complete
           account of the system, and expound the actual teachings of the great
@@ -53,7 +53,7 @@ function testmonial() {
          className="flex gap-12 overflow-x-auto px-4" style={{scrollbarWidth:"none"}}>
           
     {testimonialList.map((testimonial, index) => (
-      <div key={index} className="flex items-start gap-4 max-w-[100%] lg:mt-3 lg:max-w-[90%] lg:ml-2 flex-shrink-0">
+      <div key={index} className="flex items-start gap-4 max-w-[100%] lg:mt-0 lg:max-w-[90%] lg:ml-2 flex-shrink-0">
         <div className="hidden lg:flex flex-col items-center">
           <Image
             src={testimonial.image}
@@ -64,7 +64,7 @@ function testmonial() {
         </div>
 
         <div
-          className="text-primary lg:text-white text-sm leading-relaxed max-w-full min-h-full lg:max-h-[10rem] lg:overflow-x-auto"
+          className="text-primary lg:text-white text-base leading-relaxed max-w-full min-h-full lg:max-h-[10rem] lg:overflow-x-auto"
           style={{ scrollbarWidth: "none" }}
         >
           <p className="italic">"{testimonial.quote}"</p>

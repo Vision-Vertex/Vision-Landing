@@ -14,7 +14,7 @@ function ServicesPage(props: any) {
     <div className="font-sans bg-white min-h-screen py-6 md:py-10">
       <div className="flex flex-col md:flex-row flex-wrap justify-between items-center max-w-6xl mx-auto gap-8 px-4">
         <div className="flex-1 min-w-[0] md:min-w-[320px] max-w-[540px] w-full">
-          <div className="text-[#F26522] font-semibold text-[15px] mb-2">{service.headline}</div>
+          <div className="text-[#F26522] font-semibold text-lg mb-2">{service.headline}</div>
           <h1 className="text-[#1A2669] font-bold text-3xl md:text-4xl mb-4 leading-tight">
             {service.small_description}
           </h1>
@@ -58,14 +58,14 @@ function ServicesPage(props: any) {
               <div className="bg-[#E1EAF9] p-4 md:p-6 rounded-lg">
                 <div className="text-red-500 text-2xl mb-2">💰</div>
                 <h3 className="font-bold text-lg mb-2">{service.cards[0].title}</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-base text-gray-700">
                   {service.cards[0].description}
                 </p>
               </div>
               <div className="bg-[#E1EAF9] p-4 md:p-6 rounded-lg">
                 <div className="text-orange-500 text-2xl mb-2">👥</div>
                 <h3 className="font-bold text-lg mb-2">{service.cards[1].title}</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-base text-gray-700">
                   {service.cards[1].description}
                 </p>
               </div>
@@ -73,7 +73,7 @@ function ServicesPage(props: any) {
             <div className="bg-[#E1EAF9] p-4 md:p-6 rounded-lg">
               <div className="text-orange-500 text-2xl mb-2">📝</div>
               <h3 className="font-bold text-lg mb-2">{service.cards[2].title}</h3>
-              <p className="text-sm text-gray-700">
+              <p className="text-base text-gray-700">
                 {service.cards[2].description}
               </p>
             </div>
@@ -82,7 +82,7 @@ function ServicesPage(props: any) {
             <div className='mb-6 md:mb-10'>
               <div className="text-orange-500 text-2xl mb-2">💰</div>
               <h3 className="font-bold text-lg mb-2">{service.cards[3].title}</h3>
-              <p className="text-sm text-gray-700">
+              <p className="text-base text-gray-700">
                 {service.cards[3].description}
                 <br /><br />
                 Leverage global time zones to keep your projects moving around the clock.
@@ -95,15 +95,15 @@ function ServicesPage(props: any) {
       <div className="px-2 md:px-6 py-8 bg-white max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 md:mb-8">Case Studies</h2>
         <div className="bg-primary text-white rounded-2xl px-4 md:px-6 py-10 md:py-20 flex flex-col md:flex-row justify-between gap-6 md:gap-0">
-          <div className="md:w-1/3 text-sm leading-relaxed px-2 md:px-6">
+          <div className="md:w-1/3 text-base leading-relaxed px-2 md:px-6">
             For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.
           </div>
           <div className="hidden md:block w-px bg-secondary mx-6" />
-          <div className="md:w-1/3 text-sm leading-relaxed px-2 md:px-6">
+          <div className="md:w-1/3 text-base leading-relaxed px-2 md:px-6">
             For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.
           </div>
           <div className="hidden md:block w-px bg-secondary mx-6" />
-          <div className="md:w-1/3 text-sm leading-relaxed px-2 md:px-6">
+          <div className="md:w-1/3 text-base leading-relaxed px-2 md:px-6">
             For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.
           </div>
         </div>
