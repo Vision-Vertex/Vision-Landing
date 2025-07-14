@@ -35,7 +35,7 @@ export default function NavigationMenuDemo() {
         <Image className=' hidden md:block' src={Logo} width={110} height={110} alt="Logo" />
         <Image className='md:hidden' src={VisionLogo} width={50} height={50} alt="Logo" />
       </Link>
-      <div className="flex gap-10">
+      <div className="flex gap-8">
         <NavigationMenu>
           <NavigationMenuList>
             {/* <NavigationMenuItem>
