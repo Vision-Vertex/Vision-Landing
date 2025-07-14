@@ -50,12 +50,12 @@ function ServicesPage(props: any) {
             </a><button className="text-[#F26522] font-semibold text-base hover:underline w-full sm:w-auto">Start Now &gt;</button>
           </div>
           </div>
-        <div className="col-span-12 md:col-span-6 flex justify-center">
-  <div className="w-full">
+        <div className="col-span-12 w-full md:col-span-6 flex justify-center">
+  <div className="w-full ">
     <Image
       src={service.image}
       alt="Team working"
-      className="w-full rounded-xl object-cover h-[220px] sm:h-[260px] md:h-[300px]"
+      className="w-full rounded-xl md:h-[300px]"
       width={1400}
       height={1000}
     />
