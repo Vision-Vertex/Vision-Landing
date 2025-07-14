@@ -146,7 +146,7 @@ export const services: Services[] = [
       'As a certified Microsoft partner, we deliver trusted, enterprise-grade Microsoft 365 solutions.',
     description:
       'We specialize in deploying and optimizing the Microsoft 365 suite—including SharePoint, Power Apps, Power Automate, and Power BI—with certified expertise. From document management to AI-driven automation, we help you maximize productivity while maintaining compliance.',
-    button1: '/',
+    button1: '/contact-us',
     button2: '/',
     partners: [
       {
@@ -224,7 +224,7 @@ export const services: Services[] = [
       'Advanced analytics and BI solutions for data-driven decision making',
     description:
       'We build custom analytics platforms with Power BI, Tableau, and SQL to uncover insights, predict trends, and automate reporting.',
-    button1: '/',
+    button1: '/contact-us',
     button2: '/',
     image: Picture1,
     second_headline: 'Why Choose Our Offshore Teams?',
@@ -265,7 +265,7 @@ export const services: Services[] = [
       'Azure and AWS solutions with CI/CD pipelines for agile delivery  ',
     description:
       "We design, migrate, and manage cloud environments with infrastructure-as-code and automated deployments.",
-    button1: '/',
+    button1: '/contact-us',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',
@@ -306,7 +306,7 @@ export const services: Services[] = [
       'AI-driven process automation with RPA and machine learning',
     description:
       'We implement chatbots, document processing AI, and workflow automation to reduce costs and errors.',
-    button1: '/',
+    button1: '/contact-us',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',
@@ -347,7 +347,7 @@ export const services: Services[] = [
       'Proactive security strategies for cloud and hybrid environments ',
     description:
       "We deliver compliance audits, penetration testing, and 24/7 threat monitoring.",
-    button1: '/',
+    button1: '/contact-us',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',
@@ -388,7 +388,7 @@ export const services: Services[] = [
       'Robust solutions with Spring Boot, React, and microservices.',
     description:
       "We build scalable web applications with modern Java frameworks and cloud-native architectures.",
-    button1: '/',
+    button1: '/contact-us',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',
@@ -424,12 +424,12 @@ export const services: Services[] = [
     {
     icon: Icon5,
     headline: 'App Development',
-    slug: slugify('Java & Full Stack Development'),
+    slug: slugify('App Development'),
     small_description:
       'From low-code Power Apps to native cross-platform solutions.',
     description:
       "We develop user-centric applications with Flutter, React Native, and .NET MAUI.",
-    button1: '/',
+    button1: '/contact-us',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',
@@ -470,7 +470,7 @@ export const services: Services[] = [
       ' Hands-on programs for Microsoft, cloud, and development skills.',
     description:
       "We offer certification prep and real-world project experience.",
-    button1: '/',
+    button1: '/contact-us',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',
@@ -511,7 +511,7 @@ export const services: Services[] = [
       'Vetted freelancers for short-term projects.',
     description:
       "Access skilled professionals in development, data, and cloud within 48 hours.",
-    button1: '/',
+    button1: '/contact-us',
     button2: '/',
     image: Picture2,
     second_headline: 'Why Choose Our Offshore Teams?',

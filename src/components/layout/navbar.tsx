@@ -93,8 +93,8 @@ export default function NavigationMenuDemo() {
                       <ul className="grid w-[230px] gap-3 p-4 md:grid-cols-1 lg:w-[350px] ">
                         {navitem.components?.map((component: any) => (
                           <ListItem
-                            key={component.title}
-                            title={component.title}
+                            key={component.service_name}
+                            // title={component.service_name}
                             href={component.href}
                           >
                             {component.description}

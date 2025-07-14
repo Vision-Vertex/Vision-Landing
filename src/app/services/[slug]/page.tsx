@@ -2,7 +2,7 @@ import React, { JSX } from 'react';
 import { services } from '@/constants/data';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-
+import { Icon } from "@iconify/react";
 
 
 function ServicesPage(props: any) {
@@ -55,32 +55,33 @@ function ServicesPage(props: any) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:h-[456px]">
           <div className="md:col-span-2 grid grid-rows-2 gap-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-[#E1EAF9] p-4 md:p-6 rounded-lg">
-                <div className="text-red-500 text-2xl mb-2">💰</div>
-                <h3 className="font-bold text-lg mb-2">{service.cards[0].title}</h3>
+              <div className="bg-accent p-6 pt-10 rounded">
+                <div className='text-secondary mb-2'><Icon icon="fluent:calendar-clock-32-filled" width="40" height="40" /></div>
+                <h3 className="font-bold text-xl mb-2">{service.cards[0].title}</h3>
                 <p className="text-base text-gray-700">
                   {service.cards[0].description}
                 </p>
               </div>
-              <div className="bg-[#E1EAF9] p-4 md:p-6 rounded-lg">
-                <div className="text-orange-500 text-2xl mb-2">👥</div>
+              <div className="bg-accent p-6 pt-10 rounded">
+                <div className='text-secondary mb-2'><Icon icon="bi:person-fill" width="40" height="40" /></div>
                 <h3 className="font-bold text-lg mb-2">{service.cards[1].title}</h3>
                 <p className="text-base text-gray-700">
                   {service.cards[1].description}
                 </p>
               </div>
             </div>
-            <div className="bg-[#E1EAF9] p-4 md:p-6 rounded-lg">
-              <div className="text-orange-500 text-2xl mb-2">📝</div>
-              <h3 className="font-bold text-lg mb-2">{service.cards[2].title}</h3>
+            <div className="bg-accent p-6 pt-10 rounded">
+              <div className='text-secondary mb-2'><Icon icon="solar:scale-bold" width="40" height="40" /></div>
+                <h3 className="font-bold text-lg mb-2">{service.cards[2].title}</h3>
               <p className="text-base text-gray-700">
                 {service.cards[2].description}
               </p>
             </div>
           </div>
-          <div className="bg-[#E1EAF9] p-4 md:p-6 rounded-lg flex flex-col h-full">
+          <div className="bg-accent p-6 pt-10 rounded flex flex-col h-full">
             <div className='mb-6 md:mb-10'>
-              <div className="text-orange-500 text-2xl mb-2">💰</div>
+              <div className='text-secondary mb-2'><Icon icon="streamline-freehand:saving-piggy-bank" width="40" height="40" /></div>
+                
               <h3 className="font-bold text-lg mb-2">{service.cards[3].title}</h3>
               <p className="text-base text-gray-700">
                 {service.cards[3].description}

@@ -7,30 +7,19 @@ import { services } from '@/constants/data';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import router from 'next/router';
 
 export default function Footer() {
   const [activeIndex, setActiveIndex] = useState(-1);
-   const handleClick = (index: number, slug: string) => {
+  const router = useRouter();
+  const handleClick = (index: number, slug: string) => {
     setActiveIndex(index);
     router.push(`/services/${slug}`);
   };
-           const services = [
-  { label:'Data Analytics', slug: 'data-analytics'},
-  { label: 'Microsoft Ecosystem Solutions', slug: 'power-platform' },
-  { label: 'Full Stack Agile Development', slug: 'full-stack' },
-  { label: 'Cloud & DevSecOps', slug: 'cloud-devsecops' },
-  { label: 'IT Consulting & Strategy', slug: 'it-consulting' },
-  { label: 'Cybersecurity Solutions', slug: 'cybersecurity' },
-  { label: 'AI & Automation', slug: 'ai-automation' },
-  { label: 'App Development', slug: 'app-development' },
-  { label: 'Training & Upskilling', slug: 'training-upskilling' },
-  { label: 'Freelancing & Outsourcing', slug: 'freelancing-outsourcing' }
-];
+  
   return (
      
     <footer className="bg-primary text-gray-300">
-      <div className="max-w-7xl mx-auto py-12 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start text-sm">
+      <div className="max-w-7xl mx-auto py-12 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 items-start text-sm">
         
         {/* Column 1: Logo and Description */}
         <div>
@@ -39,7 +28,7 @@ export default function Footer() {
             width={200}
             height={200}
             alt="Vision5 Tech Logo"
-            className="mb-4"
+            className=""
           />
           <p className="text-xs leading-relaxed max-w-[260px]">
             At Vision5 Tech, we help businesses cut costs and scale faster with expert offshore
@@ -50,20 +39,20 @@ export default function Footer() {
         </div>
 
         {/* Column 2: Services */}
-        <div>
-          <h3 className="text-white text-lg font-semibold mb-4 text-center">Services</h3>
+        <div className='md:col-span-2'>
+          <h3 className="text-white text-lg font-semibold mb-4 text-start md:text-center w-full md:pr-20 ">Services</h3>
   
-           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs text-white ">
+           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs ">
         {services.map((service, index) => (
           <li
             key={service.slug}
-            className={index === activeIndex ? 'font-bold text-[17215c]' : ''}
+            // className={index === activeIndex ? 'font-bold text-[17215c]' : ''}
           >
             <button
               onClick={() => handleClick(index, service.slug)}
-              className="hover:underline text-left w-full"
+              className="hover:cursor-pointer text-left w-full"
             >
-              {service.label}
+              {service.headline}
             </button>
           </li>
         ))}
@@ -72,19 +61,19 @@ export default function Footer() {
         </div>
 
         {/* Column 3: Socials (visible on md and up) */}
-        <div className="sm:col-span-2 md:col-span-1">
-          <h3 className="text-white text-lg font-semibold mb-4 mx-24">Our Socials</h3>
-          <div className="flex space-x-4 text-xl mx-24">
-            <a href="#" aria-label="Twitter" className="hover:text-white">
+        <div className="flex flex-col items-start ">
+          <h3 className="text-white text-lg font-semibold mb-4 md:mx-20">Our Socials</h3>
+            <div className="flex space-x-4 text-xl md:mx-20">
+            <a href="#" aria-label="Twitter" className="hover:text-white" target="_blank" rel="noopener noreferrer">
               <FaTwitter />
             </a>
-            <a href="#" aria-label="LinkedIn" className="hover:text-white">
+            <a href="https://www.linkedin.com/company/vision5-tech" aria-label="LinkedIn" className="hover:text-white" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
-            <a href="#" aria-label="Instagram" className="hover:text-white">
+            <a href="#" aria-label="Instagram" className="hover:text-white" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-          </div>
+            </div>
         </div>
       </div>
 
@@ -104,4 +93,5 @@ export default function Footer() {
     </footer>
   );
 }
+        
 
