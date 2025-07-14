@@ -41,37 +41,53 @@ function ServicesList() {
       style={{ height: `calc(${visibleServices.length} * 100vh)` }}
     >
       <div
-        className="sticky top-0 h-screen px-6 md:px-14 py-10 bg-white z-10 max-w-full"
+        className="sticky top-0 min-h-screen bg-white flex items-center px-4 md:px-14 py-10  z-10"
         style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.01)' }}
       >
+        <div className="w-full">
         <h1 className="text-3xl text-primary font-bold text-center mb-5">
           Our Services
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-          <div className="col-span-12 md:col-span-6 flex flex-col gap-4 md:row-start-1">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div className="col-span-12 md:col-span-8 flex flex-col gap-4 md:row-start-1">
               <div className="flex items-center gap-2">
                 <div className="bg-primary w-2 h-5" />
                 <div className="text-secondary font-medium text-sm sm:text-base">
-                  {visibleServices[activeIndex].headline}
+                  {services[activeIndex].headline}
                 </div>
                               
               </div>
-            </div>
-            <Image
-              src={visibleServices[activeIndex].image}
-              alt={visibleServices[activeIndex].headline}
-              className="w-full"
-              width={100}
-              height={100}
-            />
-            <div className="space-y-1 mt-5">
-              <div className="text-primary">
-                {visibleServices[activeIndex].small_description}
+<div className="w-full ">
+                <Image
+                  src={services[activeIndex].image}
+                  alt={services[activeIndex].headline}
+                  className="w-full h-full rounded-xl object-cover"
+                  width={600}
+                  height={400}
+                />
+              </div>
+              <div className="flex flex-col gap-3">
+                <div className="text-primary text-sm sm:text-base px-2 leading-relaxed text-left break-words">
+                  {services[activeIndex].small_description}
+                </div>
+
+                <div className="text-sm text-gray-700 leading-relaxed px-2 text-left break-words">
+                  {services[activeIndex].description}
+                </div>
+
+                <Button variant="link" className="p-0 w-fit">
+                  <Link
+                    href={`/services/${services[activeIndex].slug}`}
+                    className="flex items-center gap-2 text-sm sm:text-base"
+                  >
+                    Learn More <ChevronRight size={18} />
+                  </Link>
+                </Button>
               </div>
 
               
             </div>
-          <div className="hidden md:flex flex-col gap-5 col-span-3 items-end">
+          <div className="hidden md:flex flex-col gap-5 col-span-4 items-end mr-2 ">
             {visibleServices.map((serv, index) => (
               <div
                 key={index}
@@ -98,6 +114,7 @@ function ServicesList() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

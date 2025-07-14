@@ -13,7 +13,7 @@ export default function Home() {
         <Services/>
         <Stat/>
         <Testmonial/>
-        <div className='px-6 md:px-14'>
+        <div className='px-4 md:px-14'>
         <AdBanner/>
 </div>
       {/* <PageContainer>
