@@ -91,7 +91,7 @@ const ContactUs = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-16 lg:px-40 py-10 md:py-20">
         <div className="flex flex-col">
           <h1 className="text-3xl font-bold text-primary mb-2">Get In Touch</h1>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-base text-gray-600 mb-6">
             At Vision5 Tech, we help businesses cut costs and scale faster with
             expert offshore development teams and tailored technology solutions.
           </p>
