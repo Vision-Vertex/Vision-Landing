@@ -113,7 +113,7 @@ function ServicesList() {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        <h1 className="text-3xl text-primary font-bold text-center mb-5">
+        <h1 className="text-3xl text-primary font-bold text-center mb-3 mt-4">
           Our Services
         </h1>
         {/* Slide */}
