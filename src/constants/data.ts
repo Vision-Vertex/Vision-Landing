@@ -141,18 +141,7 @@ export const partners: PartnerItem[] = [
     path: Partner6,
     alt: 'Partner 6',
   },
-  {
-    path: Partner1,
-    alt: 'Partner 1',
-  },
-  {
-    path: Partner2,
-    alt: 'Partner 2',
-  },
-  {
-    path: Partner3,
-    alt: 'Partner 3',
-  },
+
 ];
 
 export const services: Services[] = [
