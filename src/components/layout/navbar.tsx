@@ -5,10 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Logo from '../../../public/logos/Vision5 Logo_O1.svg';
-import VisionLogo from '../../../public/logos/vision.svg';
 
 import { cn } from '@/lib/utils';
-// import { Icons } from "@/components/icons"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -20,60 +18,26 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Button } from '../ui/button';
 import { navItems } from '@/constants/data';
-import PageContainer from './page-container';
+import { Menu } from 'lucide-react';
 
 export default function NavigationMenuDemo() {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
-  
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [drawerNav, setDrawerNav] = React.useState<string | null>(null);
+
   return (
     <div className={cn(
       "flex justify-between items-center w-full p-4 md:px-14 md:py-7",
-      isHomePage ? "bg-accent" : "bg-white"
+       "bg-accent"
     )}>
       <Link href={'/'}>
-        <Image className=' hidden md:block' src={Logo} width={110} height={110} alt="Logo" />
-        <Image className='md:hidden' src={VisionLogo} width={50} height={50} alt="Logo" />
+        <Image src={Logo} width={110} height={110} alt="Logo" />
       </Link>
-      <div className="flex gap-8">
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex gap-8">
         <NavigationMenu>
           <NavigationMenuList>
-            {/* <NavigationMenuItem>
-              <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
-                      >
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          shadcn/ui
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          Beautifully designed components that you can copy and
-                          paste into your apps. Accessible. Customizable. Open
-                          Source.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <ListItem href="/docs" title="Introduction">
-                    Re-usable components built using Radix UI and Tailwind CSS.
-                  </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
-                    How to install dependencies and structure your app.
-                  </ListItem>
-                  <ListItem
-                    href="/docs/primitives/typography"
-                    title="Typography"
-                  >
-                    Styles for headings, paragraphs, lists...etc
-                  </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem> */}
             <NavigationMenuItem className='flex items-center'>
               {navItems.map((navitem) =>
                 navitem.link ? (
@@ -94,7 +58,6 @@ export default function NavigationMenuDemo() {
                         {navitem.components?.map((component: any) => (
                           <ListItem
                             key={component.service_name}
-                            // title={component.service_name}
                             href={component.href}
                           >
                             {component.description}
@@ -111,6 +74,95 @@ export default function NavigationMenuDemo() {
         <Button variant={'default'}>
           <Link href={'/contact-us'}>Contact Us</Link>
         </Button>
+      </div>
+      {/* Mobile Navigation */}
+      <div className="md:hidden flex items-center">
+        <button
+          aria-label="Open menu"
+          className="p-2"
+          onClick={() => {
+            setMobileMenuOpen(!mobileMenuOpen);
+            setDrawerNav(null);
+          }}
+        >
+          {/* Hamburger icon */}
+          <Menu className='text-primary'/>
+        </button>
+        {mobileMenuOpen && (
+          <>
+            {/* Main Drawer */}
+            {!drawerNav && (
+              <div className="absolute top-20 right-1 md:right-14 bg-white shadow-lg rounded-lg z-50 w-[80vw] max-w-sm transition-all duration-300">
+                <ul className="flex flex-col gap-2 p-4">
+                  {navItems.map((navitem) =>
+                    navitem.link ? (
+                      <li key={navitem.title}>
+                        <Link
+                          href={navitem.href}
+                          className="block py-2 px-3 rounded hover:bg-accent"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {navitem.title}
+                        </Link>
+                      </li>
+                    ) : (
+                      <li key={navitem.title}>
+                        <button
+                          className="w-full text-left py-2 px-3 rounded cursor-pointer hover:bg-accent"
+                          onClick={() => setDrawerNav(navitem.title)}
+                        >
+                          {navitem.title}
+                        </button>
+                      </li>
+                    )
+                  )}
+                  <li>
+                    <Link
+                      href="/contact-us"
+                      className="block py-2 px-3 rounded bg-primary text-white text-center"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Contact Us
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+            {/* Secondary Drawer for Services or other navitem with children */}
+            {drawerNav && (
+              <div className="absolute top-20 right-0 bg-white shadow-lg rounded-l-lg z-50 w-[80vw] max-w-sm h-[calc(100vh-5rem)] flex flex-col transition-all duration-300 animate-slide-in">
+                <div className="flex items-center p-4 border-b">
+                  <button
+                    className="mr-2 text-lg"
+                    onClick={() => setDrawerNav(null)}
+                  >
+                    ←
+                  </button>
+                  <span className="font-semibold">{drawerNav}</span>
+                </div>
+                <ul className="flex flex-col gap-2 p-4 overflow-y-auto">
+                  {navItems
+                    .find((item) => item.title === drawerNav)
+                    ?.components?.map((component: any) => (
+                      <li key={component.service_name}>
+                        <Link
+                          href={component.href}
+                          className="block py-2 px-3 rounded hover:bg-accent"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setDrawerNav(null);
+                          }}
+                        >
+                          <span className="font-medium">{component.service_name}</span>
+                          <div className="text-xs text-muted-foreground">{component.description}</div>
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
   );
@@ -141,3 +193,6 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = 'ListItem';
+
+// Add animation for drawer sliding in
+import '@/styles/drawer-animation.css';
