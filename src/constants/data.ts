@@ -152,7 +152,7 @@ export const services: Services[] = [
     small_description:
       'As a certified Microsoft partner, we deliver trusted, enterprise-grade Microsoft 365 solutions.',
     description:
-      'We specialize in deploying and optimizing the Microsoft 365 suite—including SharePoint, Power Apps, Power Automate, and Power BI—with certified expertise. From document management to AI-driven automation, we help you maximize productivity while maintaining compliance.',
+      'We deliver solutions designed to meet your organization’s specific needs. We specialize in deploying, managing, and optimizing the Microsoft 365 suite including SharePoint, Power Apps, Power Automate, and Power BI with certified expertise. From efficient document management to AI-driven automation workflows, we help you maximize productivity, improve collaboration, and maintain compliance with industry standards. Our services ensure your business fully leverages Microsoft 365’s capabilities for long-term success and growth.',
     button1: '/contact-us',
     button2: '/',
     partners: [
@@ -230,7 +230,7 @@ export const services: Services[] = [
     small_description:
       'Advanced analytics and BI solutions for data-driven decision making',
     description:
-      'We build custom analytics platforms with Power BI, Tableau, and SQL to uncover insights, predict trends, and automate reporting.',
+      'We specialize in advanced analytics and business intelligence solutions that empower organizations to make smarter, data-driven decisions. Using tools like Power BI, Tableau, and SQL, we build custom analytics platforms tailored to your unique needs. Our solutions integrate and transform data into clear insights, helping you uncover hidden patterns, predict future trends, and automate reporting processes. By leveraging these capabilities, businesses can improve efficiency, optimize strategies, and gain a competitive edge in today’s environment.',
     button1: '/contact-us',
     button2: '/',
     image: analytics,
@@ -271,7 +271,7 @@ export const services: Services[] = [
     small_description:
       'Azure and AWS solutions with CI/CD pipelines for agile delivery  ',
     description:
-      "We design, migrate, and manage cloud environments with infrastructure-as-code and automated deployments.",
+      "We design, migrate, and manage cloud environments for businesses seeking scalable and reliable solutions. Using infrastructure as code and automated deployments, we ensure fast, consistent, and repeatable processes that reduce errors and increase efficiency. Our expertise covers both Azure and AWS platforms, enabling agile delivery through continuous integration and continuous deployment pipelines. This approach helps organizations accelerate software releases, improve collaboration, and maintain high-quality standards while adapting quickly to changing market demands and technological advancements.",
     button1: '/contact-us',
     button2: '/',
     image: cloud,
@@ -312,7 +312,7 @@ export const services: Services[] = [
     small_description:
       'AI-driven process automation with RPA and machine learning',
     description:
-      'We implement chatbots, document processing AI, and workflow automation to reduce costs and errors.',
+      'We implement AI-driven process automation solutions that leverage robotic process automation (RPA) and machine learning technologies to transform business operations. Our services include developing intelligent chatbots that enhance customer interactions, automating document processing to increase accuracy and speed, and creating seamless workflow automation that streamlines repetitive tasks. By integrating these advanced technologies, we help organizations reduce operational costs, minimize errors, improve efficiency, and free up human resources to focus on activities that drive innovation and growth.',
     button1: '/contact-us',
     button2: '/',
     image: ai,
@@ -353,7 +353,7 @@ export const services: Services[] = [
     small_description:
       'Proactive security strategies for cloud and hybrid environments ',
     description:
-      "We deliver compliance audits, penetration testing, and 24/7 threat monitoring.",
+      "We provide proactive security strategies tailored for cloud and hybrid environments to protect your critical assets and data. Our services include thorough compliance audits that ensure adherence to industry regulations and standards, comprehensive penetration testing to identify and address vulnerabilities before they can be exploited, and continuous 24/7 threat monitoring to detect and respond to security incidents in real time. By combining these approaches, we help organizations strengthen their security posture, reduce risks, and maintain trust with customers and stakeholders.",
     button1: '/contact-us',
     button2: '/',
     image: cybersecurity,
