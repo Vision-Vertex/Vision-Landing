@@ -128,7 +128,7 @@ function ServicesPage(props: any) {
                 Leverage global time zones to keep your projects moving around the clock.
               </p>
             </div>
-            <Button className='bg-primary text-white w-fit text-md rounded-2xl px-6 w-36 md:w-44 mt-auto' variant={'outline'}><Link href='/contact-us'> Contact Us </Link></Button>
+            <Button className='bg-primary text-white w-fit text-md rounded-2xl px-6 w-36 md:w-44 mt-auto' ><Link href='/contact-us'> Contact Us </Link></Button>
           </div>
         </div>
       </div>

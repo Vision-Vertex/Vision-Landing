@@ -49,23 +49,37 @@ export default function NavigationMenuDemo() {
                     {navitem.title}
                   </NavigationMenuLink>
                 ) : (
-                  <div key={navitem.title}>
-                    <NavigationMenuTrigger className='bg-transparent'>
-                      {navitem.title}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[230px] gap-3 p-4 md:grid-cols-1 lg:w-[350px] ">
-                        {navitem.components?.map((component: any) => (
-                          <ListItem
-                            key={component.service_name}
-                            href={component.href}
-                          >
-                            {component.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </div>
+                    <div
+                      key={navitem.title}
+                      className="relative group"
+                      tabIndex={0}
+                    >
+                      <NavigationMenuTrigger
+                        className="bg-transparent"
+                        onMouseEnter={e => (e.currentTarget as HTMLElement).click()}
+                        onFocus={e => (e.currentTarget as HTMLElement).click()}
+                      >
+                        {navitem.title}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent
+                        onMouseLeave={e => {
+                          // Fix: Only blur if trigger exists
+                          const trigger = e.currentTarget.previousSibling as HTMLElement | null;
+                          if (trigger) trigger.blur();
+                        }}
+                      >
+                        <ul className="grid w-[230px] gap-3 p-4 md:grid-cols-1 lg:w-[350px]">
+                          {navitem.components?.map((component: any) => (
+                            <ListItem
+                              key={component.service_name}
+                              href={component.href}
+                            >
+                              {component.description}
+                            </ListItem>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </div>
                 )
               )}
             </NavigationMenuItem>
