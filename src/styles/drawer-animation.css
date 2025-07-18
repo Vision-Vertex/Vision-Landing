@@ -8,6 +8,32 @@
     opacity: 1;
   }
 }
+@keyframes mobile-dropdown {
+  from {
+    transform: translateY(-24px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes mobile-drawer {
+  from {
+    transform: translateX(100%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .animate-slide-in {
   animation: slide-in 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animate-mobile-dropdown {
+  animation: mobile-dropdown 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animate-mobile-drawer {
+  animation: mobile-drawer 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }

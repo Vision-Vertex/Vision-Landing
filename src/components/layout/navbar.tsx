@@ -85,14 +85,21 @@ export default function NavigationMenuDemo() {
             setDrawerNav(null);
           }}
         >
-          {/* Hamburger icon */}
           <Menu className='text-primary'/>
         </button>
         {mobileMenuOpen && (
           <>
+            {/* Backdrop overlay */}
+            <div
+              className="fixed inset-0 z-40 bg-black/30"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setDrawerNav(null);
+              }}
+            />
             {/* Main Drawer */}
             {!drawerNav && (
-              <div className="absolute top-20 right-1 md:right-14 bg-white shadow-lg rounded-lg z-50 w-[80vw] max-w-sm transition-all duration-300">
+              <div className="absolute top-12 right-1 md:right-14 bg-white shadow-lg rounded-lg z-50 w-[80vw] max-w-sm transition-transform duration-300 transform animate-mobile-dropdown">
                 <ul className="flex flex-col gap-2 p-4">
                   {navItems.map((navitem) =>
                     navitem.link ? (
@@ -130,7 +137,7 @@ export default function NavigationMenuDemo() {
             )}
             {/* Secondary Drawer for Services or other navitem with children */}
             {drawerNav && (
-              <div className="absolute top-20 right-0 bg-white shadow-lg rounded-l-lg z-50 w-[80vw] max-w-sm h-[calc(100vh-5rem)] flex flex-col transition-all duration-300 animate-slide-in">
+              <div className="absolute top-12 right-0 bg-white shadow-lg rounded-l-lg z-50 w-[80vw] max-w-sm h-fit flex flex-col transition-transform duration-300 transform animate-mobile-drawer">
                 <div className="flex items-center p-4 border-b border-gray-200">
                   <button
                     className="mr-2 text-lg"
@@ -163,7 +170,6 @@ export default function NavigationMenuDemo() {
                           }}
                         >
                           <span className="font-medium">{component.service_name}</span>
-                          {/* <div className="text-xs text-muted-foreground">{component.description}</div> */}
                         </Link>
                       </li>
                     ))}
