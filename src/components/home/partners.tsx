@@ -15,7 +15,7 @@ function partners() {
             Our Partners
           </div>
           <div className="text-2xl text-white">Meet our trusted partners</div>
-          <div className="text-white text-base">
+          <div className="text-white text-lg">
             At the core of our success is a network of trusted partners who
             share our commitment to innovation and excellence. These strategic
             alliances enhance our ability to deliver exceptional IT solutions
@@ -38,7 +38,7 @@ function partners() {
       </div>
       <div className="grid grid-cols-3 gap-3 mx-5">
         {partneritems.map((partner, index) => (
-          <div className="odd:bg-accent odd:rounded-xl hover:scale-105 hover:shadow-lg transition-transform duration-300 flex items-center justify-center py-6" key={index}>
+          <div className="odd:bg-accent odd:rounded-xl even:rounded-xl hover:scale-105 hover:shadow-lg transition-transform duration-300 flex items-center justify-center py-6" key={index}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -110,7 +110,7 @@ function AboutUsPage() {
 
 
 
-      <div>
+      {/* <div>
         <div className="text-center text-primary uppercase font-bold text-3xl mb-2 mt-10 md:mt-0">
           Meet Our Team
         </div>
@@ -144,7 +144,7 @@ function AboutUsPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
