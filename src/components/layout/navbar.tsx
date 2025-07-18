@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Button } from '../ui/button';
 import { navItems } from '@/constants/data';
-import { Menu } from 'lucide-react';
+import { Menu, MoveLeft } from 'lucide-react';
 
 export default function NavigationMenuDemo() {
   const pathname = usePathname();
@@ -131,30 +131,39 @@ export default function NavigationMenuDemo() {
             {/* Secondary Drawer for Services or other navitem with children */}
             {drawerNav && (
               <div className="absolute top-20 right-0 bg-white shadow-lg rounded-l-lg z-50 w-[80vw] max-w-sm h-[calc(100vh-5rem)] flex flex-col transition-all duration-300 animate-slide-in">
-                <div className="flex items-center p-4 border-b">
+                <div className="flex items-center p-4 border-b border-gray-200">
                   <button
                     className="mr-2 text-lg"
                     onClick={() => setDrawerNav(null)}
                   >
-                    ←
+                    <MoveLeft className="text-primary" />
                   </button>
-                  <span className="font-semibold">{drawerNav}</span>
+                  <span className="font-semibold text-primary text-lg">{drawerNav}</span>
                 </div>
                 <ul className="flex flex-col gap-2 p-4 overflow-y-auto">
                   {navItems
                     .find((item) => item.title === drawerNav)
                     ?.components?.map((component: any) => (
-                      <li key={component.service_name}>
+                      <li
+                        key={component.service_name}
+                        className={cn(
+                          "py-4 px-5 rounded transition-colors",
+                          pathname === component.href ? "bg-accent text-primary" : "hover:bg-accent"
+                        )}
+                      >
                         <Link
                           href={component.href}
-                          className="block py-2 px-3 rounded hover:bg-accent"
+                          className={cn(
+                            "block w-full",
+                            pathname === component.href ? "text-primary" : ""
+                          )}
                           onClick={() => {
                             setMobileMenuOpen(false);
                             setDrawerNav(null);
                           }}
                         >
                           <span className="font-medium">{component.service_name}</span>
-                          <div className="text-xs text-muted-foreground">{component.description}</div>
+                          {/* <div className="text-xs text-muted-foreground">{component.description}</div> */}
                         </Link>
                       </li>
                     ))}
