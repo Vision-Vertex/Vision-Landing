@@ -4,6 +4,7 @@ import { Button } from '../ui/button';
 import Image from 'next/image';
 import TestmonialIcon from '../../../public/assets/Group 1000001788.svg';
 import { testmonial as testimonialList } from '@/constants/data';
+import Link from 'next/link';
 
 
 function testmonial() {
@@ -35,7 +36,8 @@ function testmonial() {
           but because those who do not know how to pursue pleasure rationally
           encounter consequences that are extremely painful.{' '}
         </div>
-        <Button variant={'secondary'}>Become our client</Button>
+        <Button variant={'secondary'}>
+          <Link href="/contact-us">Become our client</Link></Button>
       </div>
       <div className="relative">
         <Image

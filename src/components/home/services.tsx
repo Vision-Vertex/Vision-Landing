@@ -4,7 +4,7 @@ import { services } from '@/constants/data';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 function ServicesList() {
   // Only use the first 5 services
@@ -80,61 +80,107 @@ function ServicesList() {
     }
   };
 
+  // Touch swipe logic for small screens
+  const touchStartX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchEndX - touchStartX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff < 0 && activeIndex < sectionCount - 1) {
+        setActiveIndex(activeIndex + 1);
+      } else if (diff > 0 && activeIndex > 0) {
+        setActiveIndex(activeIndex - 1);
+      }
+    }
+    touchStartX.current = null;
+  };
+
   return (
     <div
       id="services-section"
       className="relative"
-      style={{ height: `calc(${visibleServices.length} * 100vh)` }}
+      style={typeof window !== 'undefined' && window.innerWidth >= 1024 ? { height: `calc(${visibleServices.length} * 100vh)` } : {}}
     >
-      {/* Horizontal scroll for small screens */}
+      {/* Slideshow for small screens */}
       <div
-        ref={containerRef}
-        className="block md:hidden w-full overflow-x-auto scroll-smooth"
-        style={{ WebkitOverflowScrolling: 'touch' }}
+        className="block lg:hidden w-full relative mt-4 mb-10 md:mt-64 lg:mt-0 "
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
-        <div className="flex w-full" style={{ width: `${visibleServices.length * 100}vw` }}>
-          {visibleServices.map((serv, index) => (
-            <div
-              key={index}
-              className="flex-none w-screen px-4 py-8"
-              style={{ scrollSnapAlign: 'start' }}
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <div className="bg-primary w-2 h-5" />
-                <div className="text-secondary font-medium text-sm sm:text-base">
-                  {serv.headline}
-                </div>
-              </div>
-              <div className="w-full h-[300px] sm:h-[350px]">
-                <Image
-                  src={serv.image}
-                  alt={serv.headline}
-                  className="w-full h-full rounded-xl object-cover"
-                  width={600}
-                  height={400}
-                />
-              </div>
-              <div className="text-primary text-lg px-2 leading-relaxed text-left break-words mt-4">
-                {serv.small_description}
-              </div>
-              <div className="text-base text-gray-700 leading-relaxed px-2 text-left break-words">
-                {serv.description}
-              </div>
-              <Button variant="link" className="p-0 w-fit px-2 mt-2">
-                <Link
-                  href={`/services/${serv.slug}`}
-                  className="flex items-center gap-2 text-base"
-                >
-                  Learn More <ChevronRight size={18} />
-                </Link>
-              </Button>
+        <h1 className="text-3xl text-primary font-bold text-center mb-5">
+          Our Services
+        </h1>
+        {/* Slide */}
+        <div className="w-full px-4 py-8 flex flex-col items-start relative">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="bg-primary w-2 h-5" />
+            <div className="text-secondary font-medium text-sm sm:text-base">
+              {visibleServices[activeIndex].headline}
             </div>
-          ))}
+          </div>
+          <div className="w-full h-[300px] sm:h-[350px] relative">
+            {/* Left Arrow on image */}
+            <button
+              aria-label="Previous"
+              onClick={() => setActiveIndex(i => Math.max(i - 1, 0))}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full p-2 opacity-80 hover:opacity-90 transition"
+              disabled={activeIndex === 0}
+            >
+              <ChevronLeft className="text-secondary" size={32} />
+            </button>
+            {/* Right Arrow on image */}
+            <button
+              aria-label="Next"
+              onClick={() => setActiveIndex(i => Math.min(i + 1, sectionCount - 1))}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full p-2 opacity-80 hover:opacity-90 transition"
+              disabled={activeIndex === sectionCount - 1}
+            >
+              <ChevronRight className="text-secondary" size={32} />
+            </button>
+            <Image
+              src={visibleServices[activeIndex].image}
+              alt={visibleServices[activeIndex].headline}
+              className="w-full h-full rounded-xl object-cover"
+              width={600}
+              height={400}
+            />
+          </div>
+          <div className="text-primary text-lg px-2 leading-relaxed text-left break-words mt-4">
+            {visibleServices[activeIndex].small_description}
+          </div>
+          <div className="text-base text-gray-700 leading-relaxed px-2 text-left break-words">
+            {visibleServices[activeIndex].description}
+          </div>
+          <Button variant="link" className="p-0 w-fit px-2 mt-2">
+            <Link
+              href={`/services/${visibleServices[activeIndex].slug}`}
+              className="flex items-center gap-2 text-base"
+            >
+              Learn More <ChevronRight size={18} />
+            </Link>
+          </Button>
+          {/* Progress Bar */}
+          <div className="absolute bottom-2 left-0 w-full flex justify-center items-center pointer-events-none">
+            <div className="flex gap-2">
+              {visibleServices.map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`h-2 rounded-full transition-all duration-300 ${activeIndex === idx ? 'bg-primary w-8' : 'bg-gray-300 w-4'}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       {/* ...existing code for md and up... */}
       <div
-        className="sticky top-0 min-h-screen bg-white flex items-center px-4 md:px-14 py-0 z-10 hidden md:flex"
+        className="sticky top-0 min-h-screen bg-white flex items-center px-4 md:px-14 py-0 z-10 hidden lg:flex"
         style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.01)' }}
       >
         <div className="w-full">

@@ -11,7 +11,7 @@ function ad() {
       </div>
       <div>
         <Button variant="secondary" className='text-white text-xs sm:text-base'>
-          <Link href="/contact">Get Started</Link>
+          <Link href="/contact-us">Get Started</Link>
         </Button>
       </div>
     </div>
