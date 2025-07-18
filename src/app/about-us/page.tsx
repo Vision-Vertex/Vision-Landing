@@ -13,7 +13,7 @@ function AboutUsPage() {
  return (
    <div className="px-6 md:px-16 py-10 space-y-3 lg:space-y-10">
             <div className="mt-10 mb-10 lg:mb-0 lg:hidden">
-          <div className="w-20 h-28 bg-primary mx-auto"></div>
+          <div className="hidden lg:block w-20 h-28 bg-primary mx-auto"></div>
           <div className="text-center text-primary uppercase font-bold text-5xl mt-2">
             About Us
           </div>
