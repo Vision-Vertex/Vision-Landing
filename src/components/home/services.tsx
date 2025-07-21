@@ -10,13 +10,22 @@ function ServicesList() {
   // Only use the first 5 services
   const visibleServices = services.slice(0, 5);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
   const sectionCount = visibleServices.length;
   const sectionHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Set screen size on mount and on resize
+    const checkScreen = () => setIsLargeScreen(window.innerWidth >= 1024);
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
-      if (window.innerWidth < 768) {
+      if (!isLargeScreen) {
         // Horizontal scroll for small screens
         const container = containerRef.current;
         if (!container) return;
@@ -44,7 +53,7 @@ function ServicesList() {
       }
     };
 
-    if (window.innerWidth < 768) {
+    if (!isLargeScreen) {
       const container = containerRef.current;
       if (container) {
         container.addEventListener('scroll', handleScroll);
@@ -58,11 +67,11 @@ function ServicesList() {
         window.removeEventListener('scroll', handleScroll);
       };
     }
-  }, [sectionCount, sectionHeight]);
+  }, [sectionCount, sectionHeight, isLargeScreen]);
 
   const handleIconClick = (index: number): void => {
     setActiveIndex(index);
-    if (window.innerWidth < 768) {
+    if (!isLargeScreen) {
       // Horizontal scroll for small screens
       const container = containerRef.current;
       if (container) {
@@ -105,7 +114,7 @@ function ServicesList() {
     <div
       id="services-section"
       className="relative"
-      style={typeof window !== 'undefined' && window.innerWidth >= 1024 ? { height: `calc(${visibleServices.length} * 100vh)` } : {}}
+      style={isLargeScreen ? { height: `calc(${visibleServices.length} * 100vh)` } : {}}
     >
       {/* Slideshow for small screens */}
       <div
