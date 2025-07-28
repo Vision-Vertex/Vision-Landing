@@ -224,9 +224,12 @@ function ServicesList() {
                   {services[activeIndex].small_description}
                 </div>
 
-                <div className="text-base text-gray-700 leading-relaxed px-2 text-left break-words">
-                  {services[activeIndex].description}
-                </div>
+<div className="text-base text-gray-700 leading-relaxed px-2 text-left break-words">
+  {services[activeIndex].description.length > 100
+    ? services[activeIndex].description.slice(0, 100) + '...'
+    : services[activeIndex].description}
+</div>
+
 
                 <Button variant="link" className="p-0 w-fit px-2">
                   <Link

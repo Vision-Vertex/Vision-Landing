@@ -150,7 +150,7 @@ export const services: Services[] = [
     headline: 'Microsoft Ecosystem Solutions',
     slug: slugify('Microsoft Ecosystem Solutions'),
     small_description:
-      'As a certified Microsoft partner, we deliver trusted, enterprise-grade Microsoft 365 solutions.',
+      'Certified Microsoft partner',
     description:
       'We deliver solutions designed to meet your organization’s specific needs. We specialize in deploying, managing, and optimizing the Microsoft 365 suite including SharePoint, Power Apps, Power Automate, and Power BI with certified expertise. From efficient document management to AI-driven automation workflows, we help you maximize productivity, improve collaboration, and maintain compliance with industry standards. Our services ensure your business fully leverages Microsoft 365’s capabilities for long-term success and growth.',
     button1: '/contact-us',
@@ -229,7 +229,7 @@ export const services: Services[] = [
     headline: 'Data Analytics & Business Intelligence',
     slug: slugify('Data Analytics & Business Intelligence'),
     small_description:
-      'Advanced analytics and BI solutions for data-driven decision making',
+      'Advanced analytics and BI solutions',
     description:
       'We specialize in advanced analytics and business intelligence solutions that empower organizations to make smarter, data-driven decisions. Using tools like Power BI, Tableau, and SQL, we build custom analytics platforms tailored to your unique needs. Our solutions integrate and transform data into clear insights, helping you uncover hidden patterns, predict future trends, and automate reporting processes. By leveraging these capabilities, businesses can improve efficiency, optimize strategies, and gain a competitive edge in today’s environment.',
     button1: '/contact-us',
@@ -271,7 +271,7 @@ export const services: Services[] = [
     headline: 'Cloud & DevOps (Azure & AWS) ',
     slug: slugify('Cloud & DevOps (Azure & AWS)'),
     small_description:
-      'Azure and AWS solutions with CI/CD pipelines for agile delivery  ',
+      'Azure and AWS solutions with CI/CD pipelines',
     description:
       "We design, migrate, and manage cloud environments for businesses seeking scalable and reliable solutions. Using infrastructure as code and automated deployments, we ensure fast, consistent, and repeatable processes that reduce errors and increase efficiency. Our expertise covers both Azure and AWS platforms, enabling agile delivery through continuous integration and continuous deployment pipelines. This approach helps organizations accelerate software releases, improve collaboration, and maintain high-quality standards while adapting quickly to changing market demands and technological advancements.",
     button1: '/contact-us',
