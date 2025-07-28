@@ -7,16 +7,15 @@ import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 function ServicesList() {
-  // Only use the first 5 services
   const visibleServices = services.slice(0, 5);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const sectionCount = visibleServices.length;
   const sectionHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
   const containerRef = useRef<HTMLDivElement>(null);
+  const serviceRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
-    // Set screen size on mount and on resize
     const checkScreen = () => setIsLargeScreen(window.innerWidth >= 1024);
     checkScreen();
     window.addEventListener('resize', checkScreen);
@@ -26,7 +25,6 @@ function ServicesList() {
   useEffect(() => {
     const handleScroll = () => {
       if (!isLargeScreen) {
-        // Horizontal scroll for small screens
         const container = containerRef.current;
         if (!container) return;
         const scrollLeft = container.scrollLeft;
@@ -36,7 +34,6 @@ function ServicesList() {
         if (newIndex >= sectionCount) newIndex = sectionCount - 1;
         setActiveIndex(newIndex);
       } else {
-        // Vertical scroll for md and up
         const section = document.getElementById('services-section');
         if (!section) return;
         const sectionTop = section.offsetTop;
@@ -72,7 +69,6 @@ function ServicesList() {
   const handleIconClick = (index: number): void => {
     setActiveIndex(index);
     if (!isLargeScreen) {
-      // Horizontal scroll for small screens
       const container = containerRef.current;
       if (container) {
         container.scrollTo({
@@ -81,15 +77,17 @@ function ServicesList() {
         });
       }
     } else {
-      // Vertical scroll for md and up
-      window.scrollTo({
-        top: index * window.innerHeight,
+const panel = serviceRefs.current[index];
+    if (panel) {
+      panel.scrollIntoView({
         behavior: 'smooth',
+        block: 'start',  
       });
+    }
     }
   };
 
-  // Touch swipe logic for small screens
+  
   const touchStartX = useRef<number | null>(null);
 
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
@@ -187,7 +185,7 @@ function ServicesList() {
           </div>
         </div>
       </div>
-      {/* ...existing code for md and up... */}
+      {/* For larger screens */}
       <div
         className="sticky top-0 min-h-screen bg-white flex items-center px-4 md:px-14 py-0 z-10 hidden lg:flex"
         style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.01)' }}
