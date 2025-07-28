@@ -38,17 +38,22 @@ function Stat() {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 gap-2 ">
         {stats.map((stat, i) => {
-          const count = useCountUp(stat.number, start, 1500);
-          return (
-            <div className="flex items-center" key={i}>
-              {<stat.icon size={24} />}
-              <div className='text-gray-600'>
-                <div className='lg:text-4xl text-2xl sm:text-2xl'>{count.toLocaleString()}</div>
-                <div className='text-sm font-light'>{stat.name}</div>
-              </div>
-            </div>
-          );
-        })}
+  const count = useCountUp(stat.number, start, 1500);
+  const isLast = i === stats.length - 1;
+
+  return (
+    <div className="flex items-center" key={i}>
+      {<stat.icon size={24} />}
+      <div className='text-gray-600'>
+        <div className='lg:text-4xl text-2xl sm:text-2xl'>
+          {count.toLocaleString()}{isLast && '%'}
+        </div>
+        <div className='text-sm font-light'>{stat.name}</div>
+      </div>
+    </div>
+  );
+})}
+
       </div>
     </div>
   );

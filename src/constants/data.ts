@@ -570,23 +570,23 @@ export const services: Services[] = [
 ];
 export const stats: Stats[] = [
   {
-    name: 'Business',
-    number: 2245341,
+    name: 'Business Clients',
+    number: 10,
     icon: Users2Icon,
   },
   {
-    name: 'Business',
-    number: 46328,
+    name: 'Students',
+    number: 200,
     icon: Users2Icon,
   },
   {
-    name: 'Business',
-    number: 828867,
+    name: 'Countries though outsourcing',
+    number: 3,
     icon: Users2Icon,
   },
   {
-    name: 'Business',
-    number: 1926436,
+    name: 'Retention',
+    number: 100,
     icon: Users2Icon,
   },
 ];
