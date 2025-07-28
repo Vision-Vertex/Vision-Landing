@@ -37,6 +37,12 @@ export interface Card {
   title: string;
   description: string;
 }
+interface caseStudy {
+  title: string;
+  description?: string;
+  image?: StaticImageData;
+  slug?: string;
+}
 export interface Services {
   icon: any;
   headline: string;
@@ -50,6 +56,7 @@ export interface Services {
   second_headline: string;
   second_description: string;
   cards: Card[];
+  caseStudies?: caseStudy[];
 }
 export interface Stats {
   icon: any;

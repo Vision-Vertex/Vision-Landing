@@ -1,21 +1,21 @@
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Roboto, Poppins } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/components/layout/navbar';
 import PageContainer from '@/components/layout/page-container';
 import Footer from '@/components/layout/footer';
 
-const poppinsRegular = Poppins({
+const robotoRegular = Roboto({
   weight: '500',
   subsets: ['latin', 'latin-ext'],
 });
 
-const poppinsBold = Poppins({
+const robotoBold = Roboto({
   weight: '600',
   subsets: ['latin', 'latin-ext'],
 });
 
-const poppinsExtraBold = Poppins({
+const robotoExtraBold = Roboto({
   weight: '700',
   subsets: ['latin', 'latin-ext'],
 });
@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppinsRegular.className} `}>
+      <body className={`${robotoRegular.className} `}>
         {/* <PageContainer> */}
           <NavBar />
 

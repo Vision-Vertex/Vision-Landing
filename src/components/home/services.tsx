@@ -118,7 +118,7 @@ function ServicesList() {
     >
       {/* Slideshow for small screens */}
       <div
-        className="block lg:hidden w-full relative mt-4 mb-10 md:mt-64 lg:mt-0 "
+        className="block lg:hidden w-full relative mt-16 mb-10  lg:mt-0 "
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >

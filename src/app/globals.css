@@ -162,4 +162,21 @@ h1 {
   @apply text-secondary;
 }
 
+/* globals.css */
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900; /* Black */
+}
+
+strong, b {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+body,p,div,span,li,td,th {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+
 

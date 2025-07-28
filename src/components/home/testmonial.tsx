@@ -21,13 +21,13 @@ function testmonial() {
 
 
   return (
-    <div className="h-screen grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-24 md:px-14 px-6">
+    <div className="h-fit grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-24 md:px-14 px-6">
       <div className="space-y-2">
-        <div className="font-medium text-secondary uppercase">Testmonials</div>
-        <div className="text-4xl text-primary font-medium">
+        <div className="font-medium text-secondary uppercase text-lg">Testmonials</div>
+        <div className="text-3xl text-primary font-medium">
           See what our client have to say about us
         </div>
-        <div className="text-base">
+        <div className="text-lg">
           But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was born and I will give you a complete
           account of the system, and expound the actual teachings of the great
@@ -37,7 +37,7 @@ function testmonial() {
           encounter consequences that are extremely painful.{' '}
         </div>
         <Button variant={'secondary'}>
-          <Link href="/contact-us">Become our client</Link></Button>
+          <Link href="/contact-us" className='text-base'>Become our client</Link></Button>
       </div>
       <div className="relative">
         <Image
@@ -48,7 +48,7 @@ function testmonial() {
           height={150}
         />
       
-        <div className="relative  lg:ml-12 lg:px-8 md:py-24">
+        <div className="relative  lg:ml-12 lg:px-8 lg:py-24">
   <div
        ref={scrollRef}
         onScroll={handleScroll}
@@ -66,7 +66,7 @@ function testmonial() {
         </div>
 
         <div
-          className="text-primary lg:text-white text-sm leading-relaxed max-w-full min-h-full lg:max-h-[10rem] lg:overflow-x-auto"
+          className="text-primary lg:text-white text-base sm:text-lg overflow-y-auto h-[200px] sm:h-full sm:text-lg leading-relaxed max-w-full sm:min-h-full lg:max-h-[10rem] lg:overflow-x-auto"
           style={{ scrollbarWidth: "none" }}
         >
           <p className="italic">"{testimonial.quote}"</p>

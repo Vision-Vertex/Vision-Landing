@@ -8,13 +8,13 @@ import { motion } from 'framer-motion';
 
 function partners() {
   return (
-    <div className="md:h-screen grid grid-cols-1 md:grid-cols-2 gap-10 p-4 md:px-14 md:py-7 items-center">
-      <div className="rounded-sm bg-primary py-5 w-full h-fit flex flex-col space-y-4  justify-center px-10">
+    <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-14  items-center mt-8 md:mt-5">
+      <div className="rounded-sm bg-primary py-5 w-full h-fit flex flex-col space-y-4  justify-center px-10 ">
         <div className="space-y-2">
           <div className="pre-header-secondary uppercase font-bold text-2xl">
             Our Partners
           </div>
-          <div className="text-2xl text-white">Meet our trusted partners</div>
+          <div className="text-3xl text-white">Meet our trusted partners</div>
           <div className="text-white text-lg">
             At the core of our success is a network of trusted partners who
             share our commitment to innovation and excellence. These strategic
@@ -32,7 +32,7 @@ function partners() {
             elevate business performance and drive lasting impact.
           </div>
         </div>
-        <Button className="bg-secondary text-white w-fit text-md">
+        <Button className="bg-secondary text-white w-fit text-base">
           <Link href="/contact-us">Become our partner</Link>
         </Button>
       </div>

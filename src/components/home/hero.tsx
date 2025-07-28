@@ -72,15 +72,15 @@ function hero() {
           </motion.div>
         {/* </div> */}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-4 md:px-14 md:py-7">
-        <h1 className="text-4xl font-bold">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 p-4 md:px-14 md:py-7 ">
+        <h1 className="text-3xl font-bold">
           Cutting Costs, Elevating Quality: Your Global Tech Partner
         </h1>
-        <div className="">
+        <div className="text-lg">
           At Vision5 Tech, we help businesses cut costs and scale faster with
           expert offshore development teams and tailored technology solutions.
           From Microsoft Power Platform to secure full stack development, we
-          deliver innovation you can trust — at a fraction of the cost.
+          deliver innovation you can trust at a fraction of the cost.
         </div>
       </div>
     </>

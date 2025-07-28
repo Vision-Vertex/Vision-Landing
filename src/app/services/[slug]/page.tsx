@@ -86,7 +86,7 @@ function ServicesPage(props: any) {
           />
         ))}
       </div> */}
-      <div className=" md:text-center  mx-auto px-4 mt-6 mb-8">
+      <div className="mx-auto px-4 md:px-16 mt-6 mb-8">
         <h2 className="text-[#1A2669] font-bold text-2xl md:text-3xl mb-2">{service.second_headline}</h2>
         <p className="text-[#222] text-base">{service.second_description}</p>
       </div>
@@ -134,18 +134,18 @@ function ServicesPage(props: any) {
       </div>
       <div className="px-2 md:px-16 py-8 bg-white  mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 md:mb-8">Case Studies</h2>
-        <div className="bg-primary text-white rounded-2xl px-4 md:px-6 py-10 md:py-20 flex flex-col md:flex-row justify-between gap-6 md:gap-0">
-          <div className="md:w-1/3 text-base leading-relaxed px-2 md:px-6">
-            For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.
+        <div className="bg-primary text-white rounded-2xl px-4 md:px-6 py-10 md:py-10 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
+          {service.caseStudies?.map((caseStudy, index) => (<React.Fragment key={index}>
+            <div  className='flex flex-col px-2 gap-2'>   
+            <div className='text-2xl font-semibold text-secondary'>{caseStudy.title}
+              </div>       
+              <div className="md:w-full text-base leading-relaxed ">
+
+            {caseStudy.description}
           </div>
-          <div className="hidden md:block w-px bg-secondary mx-6" />
-          <div className="md:w-1/3 text-base leading-relaxed px-2 md:px-6">
-            For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.
-          </div>
-          <div className="hidden md:block w-px bg-secondary mx-6" />
-          <div className="md:w-1/3 text-base leading-relaxed px-2 md:px-6">
-            For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.
-          </div>
+          
+          </div><div className="hidden md:block w-2 h-10 bg-secondary mx-6" /></React.Fragment>))}
+          
         </div>
       </div>
     </div>

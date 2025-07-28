@@ -222,6 +222,7 @@ export const services: Services[] = [
           'Ensure maximum ROI on your Microsoft investment.',
       },
     ],
+    caseStudies: [{title:'Tinova Agency',description:'Vision5 Tech transformed Tinova Agency’s scattered client feedback into a centralized Power BI dashboard, giving leadership clear visibility into customer satisfaction. This data-driven approach led to a 12% increase in repeat business after improving underperforming SEO services. The team now makes informed decisions backed by real insights, enhancing both client retention and service quality.'}]
   },
   {
     icon: analyticsIcon,
@@ -263,6 +264,7 @@ export const services: Services[] = [
           'Retail, healthcare, and finance templates.',
       },
     ],
+    caseStudies:[{title: 'First Hijrah Foundation',description:'Vision5 Tech built a custom donation tracking system for First Hijrah Foundation, replacing manual spreadsheets with a secure, scalable, and easy-to-use platform. The solution enabled real-time tracking, automated reporting, and transparent donor communication. As a result, the foundation reduced manual workload, improved stakeholder trust, and gained strategic insights to support its growing mission.'}]
   },
   {
     icon: cloudIcon,
@@ -304,6 +306,7 @@ export const services: Services[] = [
           '.',
       },
     ],
+    caseStudies:[{title:'JemSquare LLC ',description:'Vision5 Tech automated JemSquare LLC’s AWS sub-account onboarding with a CI/CD pipeline, eliminating manual configuration of Service Control Policies, IAM roles, and Control Tower permissions. The new system cut setup time from hours to minutes, reduced security risks, and ensured consistent governance. This allowed JemSquare’s DevOps team to focus on innovation while scaling securely and efficiently.'}]
   },
   {
     icon: AiIcon,
@@ -345,6 +348,7 @@ export const services: Services[] = [
           '.',
       },
     ],
+    caseStudies:[{title:'WAGMS Enterprises Inc',description:'Vision5 Tech revolutionized WAGMS’s pickup and delivery system with an AI-powered automation solution, replacing manual dispatching with intelligent scheduling and route optimization. The result: a 70% reduction in coordination time, over 95% on-time delivery rate, and significantly improved customer satisfaction. The scalable system continues to learn and improve, turning logistics into a competitive advantage for WAGMS.'}]
   },
   {
     icon: cybersecurityIcon,
@@ -386,6 +390,9 @@ export const services: Services[] = [
           '.',
       },
     ],
+    caseStudies:[{title: 'Daily Office Solutions',
+      description: 'Daily Office Solutions, a provider of office management systems, partnered with Vision5 Tech to strengthen its cybersecurity posture amid growing concerns about data breaches and compliance risks. We conducted a full security audit, then implemented multi-layered protections including endpoint detection, identity and access management (IAM), and network segmentation. The results: zero security incidents reported in the six months post-deployment, improved compliance with industry standards, and faster threat detection and response. Daily Office Solutions now operates with greater confidence, knowing its systems and client data are well-protected.'
+    },]
   },
   {
     icon: fullstackIcon,
@@ -394,7 +401,7 @@ export const services: Services[] = [
     small_description:
       'Robust solutions with Spring Boot, React, and microservices.',
     description:
-      "We build scalable web applications with modern Java frameworks and cloud-native architectures.",
+      "We specialize in building robust, scalable, and secure applications using Java and full stack technologies. Our team leverages modern frameworks across both frontend and backend to deliver end-to-end solutions tailored to your business needs. From user-friendly interfaces to powerful backend systems, we create high-performance applications that are easy to maintain and ready to grow with your business. Our full stack capabilities help organizations accelerate development, reduce complexity, and bring products to market faster.",
     button1: '/contact-us',
     button2: '/',
     image: fullstack,
@@ -435,7 +442,7 @@ export const services: Services[] = [
     small_description:
       'From low-code Power Apps to native cross-platform solutions.',
     description:
-      "We develop user-centric applications with Flutter, React Native, and .NET MAUI.",
+      "We offer custom app development services that help businesses bring their ideas to life through intuitive, scalable, and secure applications. From mobile apps to web platforms, our team builds solutions tailored to your specific needs using modern technologies and agile practices. We handle everything from design to deployment, ensuring a seamless user experience and strong performance. Our apps help organizations streamline operations, engage customers, and drive growth in an increasingly digital world.",
     button1: '/contact-us',
     button2: '/',
     image: app,
@@ -468,6 +475,13 @@ export const services: Services[] = [
           '.',
       },
     ],
+    caseStudies:[{title: 'Time Clothing',
+      description: 'Time Clothing, a fast-growing retail brand, partnered with Vision5 Tech to streamline inventory management and avoid frequent stockouts. We developed a custom stock tracking app that provides real-time visibility into product levels and sends automated alerts when items run low or go out of stock. The solution helped reduce missed sales opportunities, improved restocking efficiency, and boosted customer satisfaction. With inventory now managed proactively, Time Clothing can scale confidently while maintaining optimal product availability.'
+    },{title: 'Time Clothing',
+      description: 'Time Clothing, a fast-growing retail brand, partnered with Vision5 Tech to streamline inventory management and avoid frequent stockouts. We developed a custom stock tracking app that provides real-time visibility into product levels and sends automated alerts when items run low or go out of stock. The solution helped reduce missed sales opportunities, improved restocking efficiency, and boosted customer satisfaction. With inventory now managed proactively, Time Clothing can scale confidently while maintaining optimal product availability.'
+    },{title: 'Time Clothing',
+      description: 'Time Clothing, a fast-growing retail brand, partnered with Vision5 Tech to streamline inventory management and avoid frequent stockouts. We developed a custom stock tracking app that provides real-time visibility into product levels and sends automated alerts when items run low or go out of stock. The solution helped reduce missed sales opportunities, improved restocking efficiency, and boosted customer satisfaction. With inventory now managed proactively, Time Clothing can scale confidently while maintaining optimal product availability.'
+    },]
   },
     {
     icon: training,
@@ -476,7 +490,7 @@ export const services: Services[] = [
     small_description:
       ' Hands-on programs for Microsoft, cloud, and development skills.',
     description:
-      "We offer certification prep and real-world project experience.",
+      "We specialize in comprehensive technology training programs designed to empower individuals with diverse skill levels—from beginners to professionals. Our hands-on courses cover Microsoft 365, Power Platform, IT fundamentals, and more, tailored to meet your unique learning goals. By combining practical instruction with real-world applications, we help learners build confidence, advance their careers, and adapt to the evolving tech landscape. Our training solutions enable organizations and individuals to close skills gaps, boost productivity, and thrive in today’s digital economy.",
     button1: '/contact-us',
     button2: '/',
     image: trainingImg,
@@ -509,6 +523,7 @@ export const services: Services[] = [
           '.',
       },
     ],
+    caseStudies:[{title: 'Vision5 Tech Training',description:'Workforce Training & Upskilling Vision5 Tech launched a tailored training program to upskill hundreds of individuals—both with and without technology backgrounds—across various communities. Our hands-on curriculum covered Microsoft 365, Power Platform, and foundational IT concepts, designed to meet learners at their skill level. As a result, non-technical participants gained the confidence to enter tech roles, while those with experience advanced into higher-paying, in-demand positions. Many graduates have since landed jobs in help desk support, data analysis, and cloud administration, proving the program’s success in bridging the digital skills gap and empowering career growth.'}]
   },
   {
     icon: freelancingIcon,
@@ -517,7 +532,7 @@ export const services: Services[] = [
     small_description:
       'Vetted freelancers for short-term projects.',
     description:
-      "Access skilled professionals in development, data, and cloud within 48 hours.",
+      "We provide flexible freelance services that help businesses access expert talent on demand. From web and app development to graphic design, IT support, and digital marketing, our freelancers deliver high-quality results tailored to your needs. Whether you're launching a project or filling a skill gap, we offer fast, affordable, and reliable solutions. Our services enable small businesses and startups to scale efficiently, reduce costs, and stay competitive in a fast-paced market.",
     button1: '/contact-us',
     button2: '/',
     image: freelancing,
@@ -550,6 +565,7 @@ export const services: Services[] = [
           '.',
       },
     ],
+    caseStudies:[{title:'Freelance Services for Small Businesses',description:'Vision5 Tech has supported multiple private companies and small businesses by providing reliable freelance services across web development, graphic design, digital marketing, and IT support. Our flexible, on-demand talent model allowed clients to access expert services without the overhead of full-time hires. From building custom websites to setting up secure cloud environments, we helped businesses save time, reduce costs, and launch faster. Clients consistently reported improved productivity and professional outcomes—demonstrating how our freelance solutions deliver big impact for growing businesses.'}]
   },
 ];
 export const stats: Stats[] = [
