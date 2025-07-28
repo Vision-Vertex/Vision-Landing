@@ -25,7 +25,7 @@ function AboutUsPage() {
             It started with a vision
           </div>
           <div>
-            <p>Our story began with five friends—seasoned IT professionals from
+            <p>Our story began with five friends seasoned IT professionals from
             diverse fields like scientific research, HR, and accounting, with
             experience across both government and private sectors. What brought
             us together was a shared purpose: to solve a problem we saw in our

@@ -477,10 +477,6 @@ export const services: Services[] = [
     ],
     caseStudies:[{title: 'Time Clothing',
       description: 'Time Clothing, a fast-growing retail brand, partnered with Vision5 Tech to streamline inventory management and avoid frequent stockouts. We developed a custom stock tracking app that provides real-time visibility into product levels and sends automated alerts when items run low or go out of stock. The solution helped reduce missed sales opportunities, improved restocking efficiency, and boosted customer satisfaction. With inventory now managed proactively, Time Clothing can scale confidently while maintaining optimal product availability.'
-    },{title: 'Time Clothing',
-      description: 'Time Clothing, a fast-growing retail brand, partnered with Vision5 Tech to streamline inventory management and avoid frequent stockouts. We developed a custom stock tracking app that provides real-time visibility into product levels and sends automated alerts when items run low or go out of stock. The solution helped reduce missed sales opportunities, improved restocking efficiency, and boosted customer satisfaction. With inventory now managed proactively, Time Clothing can scale confidently while maintaining optimal product availability.'
-    },{title: 'Time Clothing',
-      description: 'Time Clothing, a fast-growing retail brand, partnered with Vision5 Tech to streamline inventory management and avoid frequent stockouts. We developed a custom stock tracking app that provides real-time visibility into product levels and sends automated alerts when items run low or go out of stock. The solution helped reduce missed sales opportunities, improved restocking efficiency, and boosted customer satisfaction. With inventory now managed proactively, Time Clothing can scale confidently while maintaining optimal product availability.'
     },]
   },
     {
@@ -490,7 +486,7 @@ export const services: Services[] = [
     small_description:
       ' Hands-on programs for Microsoft, cloud, and development skills.',
     description:
-      "We specialize in comprehensive technology training programs designed to empower individuals with diverse skill levels—from beginners to professionals. Our hands-on courses cover Microsoft 365, Power Platform, IT fundamentals, and more, tailored to meet your unique learning goals. By combining practical instruction with real-world applications, we help learners build confidence, advance their careers, and adapt to the evolving tech landscape. Our training solutions enable organizations and individuals to close skills gaps, boost productivity, and thrive in today’s digital economy.",
+      "We specialize in comprehensive technology training programs designed to empower individuals with diverse skill levels from beginners to professionals. Our hands-on courses cover Microsoft 365, Power Platform, IT fundamentals, and more, tailored to meet your unique learning goals. By combining practical instruction with real-world applications, we help learners build confidence, advance their careers, and adapt to the evolving tech landscape. Our training solutions enable organizations and individuals to close skills gaps, boost productivity, and thrive in today’s digital economy.",
     button1: '/contact-us',
     button2: '/',
     image: trainingImg,
@@ -523,7 +519,7 @@ export const services: Services[] = [
           '.',
       },
     ],
-    caseStudies:[{title: 'Vision5 Tech Training',description:'Workforce Training & Upskilling Vision5 Tech launched a tailored training program to upskill hundreds of individuals—both with and without technology backgrounds—across various communities. Our hands-on curriculum covered Microsoft 365, Power Platform, and foundational IT concepts, designed to meet learners at their skill level. As a result, non-technical participants gained the confidence to enter tech roles, while those with experience advanced into higher-paying, in-demand positions. Many graduates have since landed jobs in help desk support, data analysis, and cloud administration, proving the program’s success in bridging the digital skills gap and empowering career growth.'}]
+    caseStudies:[{title: 'Vision5 Tech Training',description:'Workforce Training & Upskilling Vision5 Tech launched a tailored training program to upskill hundreds of individuals both with and without technology backgrounds across various communities. Our hands-on curriculum covered Microsoft 365, Power Platform, and foundational IT concepts, designed to meet learners at their skill level. As a result, non-technical participants gained the confidence to enter tech roles, while those with experience advanced into higher-paying, in-demand positions. Many graduates have since landed jobs in help desk support, data analysis, and cloud administration, proving the program’s success in bridging the digital skills gap and empowering career growth.'}]
   },
   {
     icon: freelancingIcon,
@@ -593,19 +589,19 @@ export const stats: Stats[] = [
 export const testmonial: Testmonial[] = [
   {
     quote:
-      "We are incredibly grateful to Vision5 Tech LLC for developing a customized donation tracking application during one of the most critical times in our organization's history—when we purchased our new center. Their team not only delivered a user-friendly and reliable solution, but they also truly understood our community-driven mission. The application helped us manage and track hundreds of contributions with ease, transparency, and accuracy. It has been a game-changer in our fundraising and reporting efforts. We couldn't be more pleased with the professionalism, responsiveness, and technical expertise of Vision5 Tech. We highly recommend them to any organization looking for trusted IT solutions.",
+      "We are incredibly grateful to Vision5 Tech LLC for developing a customized donation tracking application during one of the most critical times in our organization's history when we purchased our new center. Their team not only delivered a user-friendly and reliable solution, but they also truly understood our community-driven mission. The application helped us manage and track hundreds of contributions with ease, transparency, and accuracy. It has been a game-changer in our fundraising and reporting efforts. We couldn't be more pleased with the professionalism, responsiveness, and technical expertise of Vision5 Tech. We highly recommend them to any organization looking for trusted IT solutions.",
     name: 'First Hijrah Foundation Board',
     image: TestmonialLogos,
   },
    {
     quote:
-      "We are incredibly grateful to Vision5 Tech LLC for developing a customized donation tracking application during one of the most critical times in our organization's history—when we purchased our new center. Their team not only delivered a user-friendly and reliable solution, but they also truly understood our community-driven mission. The application helped us manage and track hundreds of contributions with ease, transparency, and accuracy. It has been a game-changer in our fundraising and reporting efforts. We couldn't be more pleased with the professionalism, responsiveness, and technical expertise of Vision5 Tech. We highly recommend them to any organization looking for trusted IT solutions.",
+      "We are incredibly grateful to Vision5 Tech LLC for developing a customized donation tracking application during one of the most critical times in our organization's history when we purchased our new center. Their team not only delivered a user-friendly and reliable solution, but they also truly understood our community-driven mission. The application helped us manage and track hundreds of contributions with ease, transparency, and accuracy. It has been a game-changer in our fundraising and reporting efforts. We couldn't be more pleased with the professionalism, responsiveness, and technical expertise of Vision5 Tech. We highly recommend them to any organization looking for trusted IT solutions.",
     name: 'Tinova',
     image: TestmonialLogos2,
   },
   {
     quote:
-      "We are incredibly grateful to Vision5 Tech LLC for developing a customized donation tracking application during one of the most critical times in our organization's history—when we purchased our new center. Their team not only delivered a user-friendly and reliable solution, but they also truly understood our community-driven mission. The application helped us manage and track hundreds of contributions with ease, transparency, and accuracy. It has been a game-changer in our fundraising and reporting efforts. We couldn't be more pleased with the professionalism, responsiveness, and technical expertise of Vision5 Tech. We highly recommend them to any organization looking for trusted IT solutions.",
+      "We are incredibly grateful to Vision5 Tech LLC for developing a customized donation tracking application during one of the most critical times in our organization's history when we purchased our new center. Their team not only delivered a user-friendly and reliable solution, but they also truly understood our community-driven mission. The application helped us manage and track hundreds of contributions with ease, transparency, and accuracy. It has been a game-changer in our fundraising and reporting efforts. We couldn't be more pleased with the professionalism, responsiveness, and technical expertise of Vision5 Tech. We highly recommend them to any organization looking for trusted IT solutions.",
     name: 'JS',
     image: TestmonialLogos3,
   },
