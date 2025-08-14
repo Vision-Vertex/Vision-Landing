@@ -15,7 +15,6 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['framer-motion', 'react-icons', 'lucide-react'],
   },
   compress: true,
