@@ -4,17 +4,6 @@ import { useEffect } from 'react';
 export function PerformanceMonitor() {
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
-      // Monitor Core Web Vitals
-      if ('web-vital' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
-      }
-
       // Monitor image loading performance
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
@@ -26,6 +15,11 @@ export function PerformanceMonitor() {
           }
         });
       });
+
+      // Log performance metrics
+      console.log('🚀 Performance Monitor Active');
+      console.log('📊 Monitor image loading times in console');
+      console.log('🔍 Use Lighthouse for Core Web Vitals');
     }
   }, []);
 
