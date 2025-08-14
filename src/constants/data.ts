@@ -201,19 +201,19 @@ export const services: Services[] = [
         icon: Icon1,
         title: 'Official Microsoft Partner',
         description:
-          'Certified expertise for reliable implementations.',
+          'As an official Microsoft Partner, Vision5 Tech delivers trusted solutions backed by certified expertise. Our team ensures every implementation is reliable, secure, and tailored to help your organization get the most out of the Microsoft ecosystem.',
       },
       {
         icon: Icon2,
         title: 'End-to-End Power Platform Integration',
         description:
-          'Power BI, Apps, Automate & Virtual Agents.',
+          'We provide certified expertise to deliver seamless, secure, and tailored end-to-end Power Platform integrations, ensuring your organization maximizes the value of its Microsoft ecosystem.',
       },
       {
         icon: Icon3,
         title: 'Enterprise Security & Compliance',
         description:
-          'GDPR, HIPAA, and SOC 2-aligned solutions.',
+          'We offer certified expertise in enterprise-grade security and compliance, ensuring your Microsoft solutions are protected, meet regulatory standards, and support your organization’s operational integrity.',
       },
       {
         icon: Icon4,
@@ -243,19 +243,19 @@ export const services: Services[] = [
         icon: Icon1,
         title: 'AI-Enhanced Analytics',
         description:
-          'Machine learning integration.',
+          'We provide certified expertise in AI-enhanced analytics, delivering intelligent insights that help your organization make faster, data-driven decisions and unlock greater value from your business data.',
       },
       {
         icon: Icon2,
         title: 'Real-Time Dashboards',
         description:
-          'Power BI and custom visualization.',
+          'We deliver certified expertise in creating real-time dashboards that provide up-to-the-minute insights, enabling your organization to monitor performance, respond quickly, and make informed decisions with confidence.',
       },
       {
         icon: Icon3,
         title: 'Data Governance Frameworks',
         description:
-          'Quality and security assurance.',
+          'We offer certified expertise in building robust data governance frameworks, ensuring your organization’s data is accurate, secure, compliant, and consistently aligned with business objectives.',
       },
       {
         icon: Icon4,
@@ -285,19 +285,19 @@ export const services: Services[] = [
         icon: Icon1,
         title: 'Azure Expert Certified Team',
         description:
-          '.',
+          'Our Azure expert certified team delivers secure, scalable, and tailored cloud solutions, ensuring optimal performance and seamless integration within your organization’s technology ecosystem.',
       },
       {
         icon: Icon2,
         title: 'DevSecOps Implementation',
         description:
-          '.',
+          'We provide certified expertise in DevSecOps implementation, integrating security into every stage of your development pipeline to ensure faster, safer, and more reliable software delivery.',
       },
       {
         icon: Icon3,
         title: 'Multi-Cloud Hybrid Solutions',
         description:
-          '.',
+          'We offer certified expertise in multi-cloud hybrid solutions, enabling seamless integration and management across Azure, AWS, and on-premises environments to optimize flexibility and performance.',
       },
       {
         icon: Icon4,
@@ -327,19 +327,19 @@ export const services: Services[] = [
         icon: Icon1,
         title: 'Pre-Built Industry Models',
         description:
-          '.',
+          'We provide certified expertise in pre-built industry models, leveraging RPA and machine learning to automate processes and accelerate your organization’s digital transformation.',
       },
       {
         icon: Icon2,
         title: 'Seamless Microsoft 365 Integration',
         description:
-          '.',
+          'We deliver certified expertise in seamless Microsoft 365 integration, combining automation and AI to streamline workflows and enhance productivity across your organization.',
       },
       {
         icon: Icon3,
         title: 'Process Mining Capabilities',
         description:
-          '.',
+          'We offer certified expertise in process mining, using advanced analytics to uncover inefficiencies, optimize workflows, and drive continuous improvement through data-driven insights.',
       },
       {
         icon: Icon4,
@@ -369,19 +369,19 @@ export const services: Services[] = [
         icon: Icon1,
         title: 'Microsoft Security Partner',
         description:
-          '.',
+          'As a trusted Microsoft Security Partner, we deliver proactive security strategies that protect your cloud and hybrid environments against evolving threats.',
       },
       {
         icon: Icon2,
         title: 'GDPR/HIPAA Compliance Specialists',
         description:
-          '.',
+          'We specialize in GDPR and HIPAA compliance, ensuring your cloud and hybrid environments meet regulatory requirements while maintaining data privacy and security.',
       },
       {
         icon: Icon3,
         title: 'Cloud-Native Protection',
         description:
-          '.',
+          'We deliver expertise in cloud-native protection, implementing advanced security measures designed specifically to safeguard your cloud environments against modern cyber threats.',
       },
       {
         icon: Icon4,
@@ -413,19 +413,19 @@ export const services: Services[] = [
         icon: Icon1,
         title: 'Java Experts (Spring/Quarkus)',
         description:
-          '.',
+          'Our Java experts specialize in Spring and Quarkus frameworks, delivering robust, scalable, and efficient backend solutions tailored to your business needs.',
       },
       {
         icon: Icon2,
         title: 'React/Angular Specialists',
         description:
-          '.',
+          'We provide skilled React and Angular specialists who build dynamic, responsive, and user-friendly front-end applications to enhance your digital experience.',
       },
       {
         icon: Icon3,
         title: 'CI/CD Pipeline Integration',
         description:
-          '.',
+          'We deliver expertise in CI/CD pipeline integration, enabling automated, efficient, and reliable software delivery for faster time-to-market and improved development workflows.',
       },
       {
         icon: Icon4,
@@ -454,19 +454,19 @@ export const services: Services[] = [
         icon: Icon1,
         title: 'Power Platform Integration',
         description:
-          '.',
+          'We provide certified expertise in Power Platform integration, creating low-code solutions that streamline processes and empower your organization with rapid app development.',
       },
       {
         icon: Icon2,
         title: 'Cross-Platform Capabilities',
         description:
-          '.',
+          'Our team specializes in cross-platform app development, building native solutions that work seamlessly across devices to enhance user experience and expand your reach.',
       },
       {
         icon: Icon3,
         title: 'IoT & Wearable Tech Experience',
         description:
-          '.',
+          'We have deep experience in IoT and wearable technology, developing innovative solutions that connect devices and deliver real-time data to drive smarter decisions.',
       },
       {
         icon: Icon4,
@@ -498,19 +498,19 @@ export const services: Services[] = [
         icon: Icon1,
         title: 'Microsoft Learning Partner',
         description:
-          '.',
+          'As a Microsoft Learning Partner, we deliver hands-on training programs that build practical skills in Microsoft technologies, empowering your team to excel and innovate.',
       },
       {
         icon: Icon2,
         title: 'Cloud Lab Environments',
         description:
-          '.',
+          'We provide immersive cloud lab environments that offer practical, real-world experience, helping your team master cloud technologies through hands-on learning.',
       },
       {
         icon: Icon3,
         title: 'Job Placement Assistance',
         description:
-          '.',
+          'We offer job placement assistance to connect skilled trainees with opportunities, helping bridge the gap between learning and professional success in the tech industry.',
       },
       {
         icon: Icon4,
@@ -540,19 +540,19 @@ export const services: Services[] = [
         icon: Icon1,
         title: 'Rigorous Vetting Process',
         description:
-          '.',
+          'We use a rigorous vetting process to ensure our freelancers are highly skilled, reliable, and ready to deliver quality results for your short-term projects.',
       },
       {
         icon: Icon2,
         title: 'Microsoft Technology Experts',
         description:
-          '.',
+          'Our freelancers are Microsoft technology experts, equipped to provide specialized skills and solutions that meet your project’s unique requirements.',
       },
       {
         icon: Icon3,
         title: 'Hourly or Project-Based Contracts',
         description:
-          '.',
+          'We offer flexible hourly or project-based contracts, allowing you to engage skilled freelancers on terms that best fit your project needs and budget.',
       },
       {
         icon: Icon4,

@@ -19,7 +19,14 @@ function AboutUsPage() {
           </div>
         </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2 ">
-        <Image src={Picture1} alt="Picture1" className="hidden lg:block" />
+        <Image 
+          src={Picture1} 
+          alt="Picture1" 
+          className="hidden lg:block"
+          priority
+          placeholder="blur"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
         <div className="text-base space-y-4">
           <div className="text-secondary uppercase font-bold text-lg">
             It started with a vision
@@ -52,7 +59,14 @@ function AboutUsPage() {
             About Us
           </div>
         </div>
-        <Image src={Picture2} alt="Picture2" className="hidden lg:block" />
+        <Image 
+          src={Picture2} 
+          alt="Picture2" 
+          className="hidden lg:block"
+          loading="lazy"
+          placeholder="blur"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
         <div className="text-base space-y-4 lg:mt-3 ">
           <div>
            <p> Recognizing the untapped potential of global talent, we expanded our
@@ -107,44 +121,6 @@ function AboutUsPage() {
   })}
 </div>
 
-
-
-
-      {/* <div>
-        <div className="text-center text-primary uppercase font-bold text-3xl mb-2 mt-10 md:mt-0">
-          Meet Our Team
-        </div>
-        <div className="text-center text-primary/80 mb-12 text-base w-full md:w-2/3 mx-auto ">
-          Here are the people who make it all happen. We are a team of
-          passionate individuals who are dedicated to delivering the best
-          possible service to our clients.{' '}
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {team.map((member, index) => (
-            <div key={index} className="relative">
-              <Image
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute bottom-0 w-full bg-primary/30  px-10 py-5 flex justify-between items-center">
-                <div className="space-y-2">
-                  <div className="text-white text-sm">{member.position}</div>
-                  <div className="text-white text-sm">{member.name}</div>
-                </div>
-                <div className="flex gap-4">
-                  <Link href={member.linkedin} target="_blank">
-                    <BsLinkedin className="text-white text-xl hover:text-white/80" />
-                  </Link>
-                  <Link href={`mailto:${member.email}`} target="_blank">
-                    <BsEnvelopeAtFill className="text-white text-xl hover:text-white/80" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
     </div>
   );
 }

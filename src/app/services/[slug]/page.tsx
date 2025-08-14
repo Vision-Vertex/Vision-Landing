@@ -6,9 +6,8 @@ import { Icon } from "@iconify/react";
 import Image from 'next/image';
 import Link from 'next/link';
 
-
-function ServicesPage(props: any) {
-  const { params} = props;
+async function ServicesPage(props: any) {
+  const params = await props.params;
   const service = services.find((s) => s.slug === params.slug);
   if (!service) return notFound();
 
@@ -46,6 +45,10 @@ function ServicesPage(props: any) {
       className="w-full object-cover rounded-xl md:h-[300px]"
       width={1400}
       height={1000}
+      loading="lazy"
+      placeholder="blur"
+      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+      sizes="(max-width: 768px) 100vw, 50vw"
     />
   </div>
           <p className="text-[#222] text-lg mb-6">
@@ -69,6 +72,10 @@ function ServicesPage(props: any) {
       className="w-full object-cover rounded-xl md:h-[300px]"
       width={1400}
       height={1000}
+      loading="lazy"
+      placeholder="blur"
+      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+      sizes="(max-width: 768px) 100vw, 50vw"
     />
   </div>
 </div>
@@ -90,8 +97,8 @@ function ServicesPage(props: any) {
         <h2 className="text-[#1A2669] font-bold text-2xl md:text-3xl mb-2">{service.second_headline}</h2>
         <p className="text-[#222] text-base">{service.second_description}</p>
       </div>
-      <div className="p-3 md:p-6 md:px-16 bg-white  mx-auto px-2 md:px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:h-[456px]">
+      <div className="p-3 md:py-6 md:px-16 bg-white mx-auto px-2 md:px-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:min-h-[456px]">
           <div className="md:col-span-2 grid grid-rows-2 gap-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-accent p-6 pt-10 rounded">
@@ -117,7 +124,7 @@ function ServicesPage(props: any) {
               </p>
             </div>
           </div>
-          <div className="bg-accent p-6 pt-10 rounded flex flex-col h-full">
+          <div className="bg-accent p-6 pt-10 rounded flex flex-col justify-between min-h-full">
             <div className='mb-6 md:mb-10'>
               <div className='text-secondary mb-2'><Icon icon="streamline-freehand:saving-piggy-bank" width="40" height="40" /></div>
                 
@@ -132,7 +139,7 @@ function ServicesPage(props: any) {
           </div>
         </div>
       </div>
-      <div className="px-2 md:px-16 py-8 bg-white  mx-auto">
+      <div className="px-2 md:px-16 py-8 bg-white mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 md:mb-8">Case Studies</h2>
         <div className="bg-primary text-white rounded-2xl px-4 md:px-6 py-10 md:py-10 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
           {service.caseStudies?.map((caseStudy, index) => (<React.Fragment key={index}>
